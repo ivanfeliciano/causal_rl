@@ -55,6 +55,7 @@ class TaxiSEM(object):
 		self.pos[23] = self.pos[18] + self.pos[24] + self.pos[22] + self.initial_self.pos[23]
 		self.pos[24] = self.pos[19] + self.pos[23] + self.initial_self.pos[24]
 	def decode_tuple(coordinates_x_y):
+		"""Decodifica tupla para obtener estado"""
 		dict_pos = {(0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 3, (0, 4): 4, (1, 0): 5, (1, 1): 6, (1, 2): 7, (1, 3): 8, (1, 4): 9, (2, 0): 10, (2, 1): 11, (2, 2): 12, (2, 3): 13, (2, 4): 14, (3, 0): 15, (3, 1): 16, (3, 2): 17, (3, 3): 18, (3, 4): 19, (4, 0): 20, (4, 1): 21, (4, 2): 22, (4, 3): 23, (4, 4): 24}
 		return dict_pos[coordinates_x_y]
 
