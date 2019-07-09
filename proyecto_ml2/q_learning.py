@@ -38,8 +38,7 @@ class QLearning(object):
 				action, _ = self.epsilon_greedy(state)
 				new_state, reward, done, info = self.env.step(action)
 				if use_reward_feedback and _ != None: reward *= _
-				if done:
-					self.Q[new_state] = np.ones(self.number_of_actions) * (reward * 10)
+				if done: self.Q[new_state] = np.ones(self.number_of_actions) * (reward * 10)
 				self.Q[state, action] = self.Q[state, action] + self.alpha * (reward + self.gamma * np.max(self.Q[new_state, :]) - self.Q[state, action])
 				state = new_state
 				reward_episode += reward
