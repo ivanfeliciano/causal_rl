@@ -2,7 +2,6 @@
 import random
 
 import numpy as np
-from structural_equation_modeling import TaxiSEM
 from q_learning import QLearning
 
 
@@ -16,20 +15,19 @@ def is_a_valid_movement(row, col, action):
 def counterfactual(state, action, outcome):
 	destination_locs = [(0,0), (0,4), (4,0), (4,3)]
 	row, col, passenger, destination = state
-	variables = {
-		"southA" : False, "northA" : False, "westA" : False, "eastA" : False, "southMove" : False, "northMove" : False, "eastMove" : False, "westMove" : False, "goal" : False, "onGoalDestination" : False, "dropoff" : False, "onPassengerDestination" : False, "pickup" : False, "inTheCab" : False,}
+	variables = {"southA" : False, "northA" : False, "westA" : False, "eastA" : False, "southMove" : False, "northMove" : False, "eastMove" : False, "westMove" : False, "goal" : False, "onGoalDestination" : False, "dropoff" : False, "onPassengerDestination" : False, "pickup" : False, "inTheCab" : False,}
 	# Movements
 	if action == 0 and is_a_valid_movement(row, col, action):
 		variables["southMove"] = True
 	if action == 1 and  is_a_valid_movement(row, col, action):
 		variables["northMove"] = True
 	if action == 2 and is_a_valid_movement(row, col, action):
-		variables["eastMove"]
+		variables["eastMove"] = True
 	if action == 3 and is_a_valid_movement(row, col, action):
-		variables["westMove"]
+		variables["westMove"] = True
 	
 	# Pick and place
-	if action == 4:
+	if action == 4 and passenger < 4:
 		variables["pickup"] = True
 	if action == 5:
 		variables["dropoff"] = True
@@ -40,45 +38,35 @@ def counterfactual(state, action, outcome):
 	if (passenger < 4) and (row, col) == destination_locs[passenger]: variables["onPassengerDestination"] = True
 
 	# Goal and cab
-	variables["inTheCab"] = (passenger > 3) or ( variables["pickup"] and variables["onPassengerDestination"])
-	variables["goal"] = variables["inTheCab"] and variables["dropoff"] and variables["onGoalDestination"]
+	variables["inTheCab"] = variables["pickup"] and variables["onPassengerDestination"]
+	variables["goal"] = (passenger == 4) and variables["dropoff"] and variables["onGoalDestination"]
 	return variables[outcome]
 
 class QLearningCausal(QLearning):
 	"""docstring for QLearningCausal"""
 	def epsilon_greedy(self, state):
-		# ignore_oracle = True if random.random() > 0.99 else False
-		ignore_oracle = False
-		if random.random() < 0.9:
-			return np.argmax(self.Q[state, :]), None
+		eps = np.random.uniform()
 		state_decoded = [i for i in self.env.decode(state)]
-		if counterfactual(state_decoded, 5, "goal"):
-			return 5, 10
-		if counterfactual(state_decoded, 4, "inTheCab"):
-			return 4, 5
 		possible_moves = []
-		if counterfactual(state_decoded, 0, "southMove"): possible_moves.append(0)
-		if counterfactual(state_decoded, 1, "northMove"): possible_moves.append(1)
-		if counterfactual(state_decoded, 2, "eastMove"): possible_moves.append(2)
-		if counterfactual(state_decoded, 3, "westMove"): possible_moves.append(3)
-		best = [-1000, -1000, -1000, -1000]
-		for i in possible_moves:
-			best[i] = self.Q[state][i]
-		return np.argmax(best), None
-		# return self.env.action_space.sample()
+		if counterfactual(state_decoded, 5, "goal"):
+			return 5, 2
+		if counterfactual(state_decoded, 4, "inTheCab"):
+			return 4, 1.5
+		if eps < 0.9:
+			best = [-1000, -1000, -1000, -1000]
+			best_ini = [-1000, -1000, -1000, -1000]
+			if counterfactual(state_decoded, 0, "southMove"): best[0] = self.Q[state][0]
+			if counterfactual(state_decoded, 1, "northMove"): best[1] = self.Q[state][1]
+			if counterfactual(state_decoded, 2, "eastMove"): best[2] = self.Q[state][2]
+			if counterfactual(state_decoded, 3, "westMove"): best[3] = self.Q[state][3]
+			if best != [-1000, -1000, -1000, -1000]:
+				return np.argmax(best), -1
+			return np.argmax(self.Q[state, :]), None
+		return self.env.action_space.sample(), None
 def main():
-	import time
-	total = []
-	# for i in range(10):
-	# 	time_s = time.time()
 	q = QLearningCausal()
-	avg = q.train()
-		# q.train()
+	avg = q.train("QLearningCausal")
 	q.test()
-	total.append(avg)
-	mean_reward = np.mean(total, axis=0)
-	for i in mean_reward:
-		print(i)
 
 if __name__ == '__main__':
 	main()

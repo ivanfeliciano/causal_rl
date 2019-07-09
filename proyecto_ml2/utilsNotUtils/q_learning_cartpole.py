@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 class QLearning(object):
 	"""docstring for QLearning"""
-	def __init__(self, episodes=10000, alpha=0.1, gamma=0.9, epsilon=0.5):
+	def __init__(self, episodes=1000, alpha=0.1, gamma=0.95, epsilon=0.9):
 		self.episodes = episodes
 		self.alpha = alpha
 		self.gamma = gamma
