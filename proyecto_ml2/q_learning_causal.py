@@ -4,6 +4,7 @@ import random
 import numpy as np
 from q_learning import QLearning
 
+random.seed(42)
 
 def is_a_valid_movement(row, col, action):
 	"""	[S, N, E, W] """
@@ -52,16 +53,16 @@ class QLearningCausal(QLearning):
 			return 5, 2
 		if counterfactual(state_decoded, 4, "inTheCab"):
 			return 4, 1.5
-		if eps < 0.9:
-			best = [-1000, -1000, -1000, -1000]
-			best_ini = [-1000, -1000, -1000, -1000]
+		if eps > self.epsilon:
+			best = [-100000, -100000, -100000, -100000]
 			if counterfactual(state_decoded, 0, "southMove"): best[0] = self.Q[state][0]
 			if counterfactual(state_decoded, 1, "northMove"): best[1] = self.Q[state][1]
 			if counterfactual(state_decoded, 2, "eastMove"): best[2] = self.Q[state][2]
 			if counterfactual(state_decoded, 3, "westMove"): best[3] = self.Q[state][3]
-			if best != [-1000, -1000, -1000, -1000]:
+			if best != [-100000, -100000, -100000, -100000]:
 				return np.argmax(best), -1
 			return np.argmax(self.Q[state, :]), None
+		self.random_actions += 1
 		return self.env.action_space.sample(), None
 def main():
 	q = QLearningCausal()
