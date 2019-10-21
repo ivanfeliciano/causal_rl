@@ -22,13 +22,15 @@ python app.py
 
 The output of the program are several plots comparing the performance of each version of the algorithm.
 
-![Comparison Deterministic Environment][comparisonDeterministic.jpg]
-![Comparison Stochastic Environment][comparisonStochastic.jpg]
+![Comparison Deterministic Environment][https://raw.githubusercontent.com/ivanfeliciano/causal_rl/master/proyecto_ml2/comparisonDeterministic.jpg]
+
+![Comparison Stochastic Environment][https://raw.githubusercontent.com/ivanfeliciano/causal_rl/master/proyecto_ml2/comparisonStochastic.jpg]
 
 
 If significance test is required also the plots for the episode where the goal reward is reached are available.
 
-![Goal Reward Deterministic][./goal_reward_comparisonDeterministic.jpg]
-![Goal Reward Stochastic][./goal_reward_comparisonStochastic.jpg]
+![Goal Reward Deterministic][https://raw.githubusercontent.com/ivanfeliciano/causal_rl/master/proyecto_ml2/goal_reward_comparisonDeterministic.jpg]
+
+![Goal Reward Stochastic][https://raw.githubusercontent.com/ivanfeliciano/causal_rl/master/proyecto_ml2/goal_reward_comparisonStochastic.jpg]
 
 
