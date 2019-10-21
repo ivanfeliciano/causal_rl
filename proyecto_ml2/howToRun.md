@@ -11,12 +11,13 @@ python app.py
 
 ### Optional parameters
 
+```bash
 "--stochastic", help="change to simple stochastic environments (0.7 prob of do the choosen action)", action="store_true"
 "--episodes", type=int, default=1000, help="# of episodes per experiment"
 "--experiments", type=int, default=5, help="# of experiments"
 "--stat_test", action="store_true", help="Compute the Mann-Whitney rank test to check if some algorithm reach the goal faster. Need > 20 experiments"
 "-v", "--verbose", action="store_true", help="Verbosity activated"
-
+```
 ## Output
 
 The output of the program are several plots comparing the performance of each version of the algorithm.
@@ -27,7 +28,7 @@ The output of the program are several plots comparing the performance of each ve
 
 If significance test is required also the plots for the episode where the goal reward is reached are available.
 
-![Goal Reward Deterministic][goal_reward_comparisonDeterministic.jpg]
-![Goal Reward Stochastic][goal_reward_comparisonStochastic.jpg]
+![Goal Reward Deterministic][./goal_reward_comparisonDeterministic.jpg]
+![Goal Reward Stochastic][./goal_reward_comparisonStochastic.jpg]
 
 
