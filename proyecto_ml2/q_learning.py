@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 
 THRESHOLD = 9
 MOD_EPISODE = 1
-random.seed(42)
 
 class QLearning(object):
 	"""docstring for QLearning"""
@@ -17,24 +16,22 @@ class QLearning(object):
 		self.episodes = episodes
 		self.alpha = alpha
 		self.gamma = gamma
+		self.true_action_prob = 0.7
 		self.epsilon = epsilon
 		self.env = gym.make('Taxi-v2')
 		self.number_of_actions = self.env.action_space.n
 		self.number_of_states = self.env.observation_space.n
-		self.random_actions = 0
 		self.Q = np.zeros([self.number_of_states, self.number_of_actions])
 
 	def epsilon_greedy(self, state):
 		eps = np.random.uniform()
 		if eps > self.epsilon:
 			return np.argmax(self.Q[state, :]), None
-		self.random_actions += 1
 		return self.env.action_space.sample(), None
 	def train(self, plot_name="QLearning", use_reward_feedback=False, stochastic=False):
 		state = self.env.reset()
-		reward_list = []
-		avg_reward_list = []
-		times_stuckit = 0
+		list_of_individual_episode_reward = []
+		avg_reward_all_training = []
 		flag = True
 		threshold_reached = False
 		time_to_reach_t = None
@@ -44,13 +41,13 @@ class QLearning(object):
 			done = False
 			while not done:
 				action, _ = self.epsilon_greedy(state)
+				if stochastic:
+					if np.random.uniform() > self.true_action_prob:
+						remain_actions = [i for i in range(self.number_of_actions)]
+						remain_actions.remove(action)
+						action = np.random.choice(remain_actions)
 				new_state, reward, done, info = self.env.step(action)
 				if new_state == state and action < 4:
-					# if flag:
-					# 	print("new_state {}, state {}".format([i for i in self.env.decode(new_state)], [i for i in self.env.decode(state)]))
-					# 	print("action {}".format(action))
-					# 	flag = False
-					times_stuckit += 1
 					reward = -10
 				if use_reward_feedback and _ != None: reward *= _
 				if done: self.Q[new_state] = np.ones(self.number_of_actions) * (reward * 10)
@@ -60,24 +57,21 @@ class QLearning(object):
 			if not threshold_reached and reward_episode >= THRESHOLD:
 				threshold_reached = True
 				time_to_reach_t = episode
-			reward_list.append(reward_episode)
+			list_of_individual_episode_reward.append(reward_episode)
 			if episode == 0 or (episode + 1) % MOD_EPISODE == 0:
-				# print(reward_list)
-				ave_reward = np.mean(reward_list)
-				avg_reward_list.append(ave_reward)
-				reward_list = []
-		plot_x_axis = MOD_EPISODE * (np.arange(len(avg_reward_list)) + 1)
-		plt.plot(plot_x_axis, avg_reward_list, label=plot_name)
+				ave_reward = np.mean(list_of_individual_episode_reward)
+				avg_reward_all_training.append(ave_reward)
+				list_of_individual_episode_reward = []
+		plot_x_axis = MOD_EPISODE * (np.arange(len(avg_reward_all_training)) + 1)
+		plt.plot(plot_x_axis, avg_reward_all_training, label=plot_name)
 		plt.xlabel('Episodes')
 		plt.ylabel('Average Reward')
 		plt.legend()
 		plt.title('Average Reward Comparison')
 		plt.savefig(plot_name + ".jpg")     
 		plt.close()
-		print(times_stuckit)
-		print(self.random_actions)
-		print("Time to reach t =  {}".format(time_to_reach_t))
-		return avg_reward_list, time_to_reach_t
+		# print("Time to reach t =  {}".format(time_to_reach_t))
+		return avg_reward_all_training, time_to_reach_t
 	def test(self, number_of_tests=1):
 		for i in range(number_of_tests):
 			state = self.env.reset()

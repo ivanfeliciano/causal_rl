@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-import random
 
 import numpy as np
 from q_learning import QLearning
 
-random.seed(42)
 
 def is_a_valid_movement(row, col, action):
 	"""	[S, N, E, W] """
@@ -62,7 +60,6 @@ class QLearningCausal(QLearning):
 			if best != [-100000, -100000, -100000, -100000]:
 				return np.argmax(best), -1
 			return np.argmax(self.Q[state, :]), None
-		self.random_actions += 1
 		return self.env.action_space.sample(), None
 def main():
 	q = QLearningCausal()
