@@ -56,7 +56,9 @@ def main():
 			if vanilla_times[i] == None:
 				vanilla_times[i] = episodes
 		print("Vanilla average episode to reach goal reward: {}".format(np.mean(vanilla_times)))
+		print("Vanilla standard deviation episode to reach goal reward: {}".format(np.std(vanilla_times)))
 		print("CM average episode to reach goal reward: {}".format(np.mean(cm_times)))
+		print("CM standard deviation episode to reach goal reward: {}".format(np.std(cm_times)))
 		print(stats.mannwhitneyu(cm_times, vanilla_times))
 		plt.plot(np.arange(number_of_experiments), vanilla_times, label="Vanilla Q-learning")
 		plt.plot(np.arange(number_of_experiments), cm_times, label="Q-learning + CM")
