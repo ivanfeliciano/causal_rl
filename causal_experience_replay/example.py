@@ -5,7 +5,6 @@ import gym
 from gym.wrappers import Monitor
 import gym_ple
 
-# The world's simplest agent!
 class RandomAgent(object):
     def __init__(self, action_space):
         self.action_space = action_space
@@ -19,14 +18,14 @@ if __name__ == '__main__':
     # amount of output.
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    X = ['Pong', 'Catcher', 'MonsterKong', 'FlappyBird', 'Pixelcopter', 'PuckWorld', 'RaycastMaze', 'Snake', 'WaterWorld']
+    X = ['Pong', 'Catcher', 'FlappyBird', 'Pixelcopter', 'Snake']
     env = gym.make('{}-v5'.format(X[0]))
 
     # You provide the directory to write to (can be an existing
     # directory, including one with existing data -- all monitor files
     # will be namespaced). You can also dump to a tempdir if you'd
     # like: tempfile.mkdtemp().
-    outdir = '/tmp/random-agent-results'
+    outdir = './logs'
     env = Monitor(env, directory=outdir, force=True)
 
     # This declaration must go *after* the monitor call, since the
@@ -54,5 +53,5 @@ if __name__ == '__main__':
     # Upload to the scoreboard. We could also do this from another
     # process if we wanted.
     logger.info("Successfully ran RandomAgent. Now trying to upload results to the scoreboard. If it breaks, you can always just try re-uploading the same results.")
-#    gym.upload(outdir)
+    gym.upload(outdir)
     # Syntax for uploading has changed
