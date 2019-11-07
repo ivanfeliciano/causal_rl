@@ -19,8 +19,8 @@ if __name__ == '__main__':
     # amount of output.
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-
-    env = gym.make('FlappyBird-v0' if len(sys.argv)<2 else sys.argv[1])
+    X = ['Pong', 'Catcher', 'MonsterKong', 'FlappyBird', 'Pixelcopter', 'PuckWorld', 'RaycastMaze', 'Snake', 'WaterWorld']
+    env = gym.make('{}-v5'.format(X[0]))
 
     # You provide the directory to write to (can be an existing
     # directory, including one with existing data -- all monitor files
@@ -46,7 +46,7 @@ if __name__ == '__main__':
             action = agent.act(ob, reward, done)
             ob, reward, done, _ = env.step(action)
             print(ob[1])
-            # env.render()
+            env.render()
             if done:
                 break
             # Note there's no env.render() here. But the environment still can open window and
