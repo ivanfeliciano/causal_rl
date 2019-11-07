@@ -103,7 +103,7 @@ Arriba, abajo, izquieda y derecha.
 
 ## Recompensas
 
-Recompensa positiva +1 cuando la cabez tiene contacto con un cuadro rojo. 
+Recompensa positiva +1 cuando la cabeza tiene contacto con un cuadro rojo. 
 -1 cuando tiene un estado terminal (choca con la pared o con su propio cuerpo).
 
 ## Estados 
