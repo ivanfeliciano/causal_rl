@@ -10,7 +10,15 @@ class RandomAgent(object):
         self.action_space = action_space
 
     def act(self, observation, reward, done):
-        return self.action_space.sample()
+        command = input()
+        a = self.action_space.sample()
+        print("Action = {}".format(a))
+        return a
+        # if command == "j":
+        #     print("left")
+        #     return 0
+        # print("right")
+        # return 1
 
 if __name__ == '__main__':
     # You can optionally set up the logger. Also fine to set the level
@@ -19,7 +27,7 @@ if __name__ == '__main__':
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     X = ['Pong', 'Catcher', 'FlappyBird', 'Pixelcopter', 'Snake']
-    env = gym.make('{}-v5'.format(X[1]))
+    env = gym.make('{}-v5'.format(X[4]))
 
     # You provide the directory to write to (can be an existing
     # directory, including one with existing data -- all monitor files

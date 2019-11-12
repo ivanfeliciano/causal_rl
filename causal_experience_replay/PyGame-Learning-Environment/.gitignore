@@ -4,3 +4,4 @@
 /examples/*.png
 *.swp
 *.egg-info
+/logs/

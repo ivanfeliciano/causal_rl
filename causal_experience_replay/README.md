@@ -16,3 +16,5 @@ no visuales.
 * Buscar cuál algoritmo de DRL es el estado del arte para esos juegos o en general.
 * Seguir buscando otras formas de representar causalidad.
 * ¿Puedo aprender esos modelos al darle las variables de estado y de acción?
+* ¿Los modelos me pueden servir para imaginar y generar experiencias? Porque eso parece, es mucho más intuitivo aplicar
+las intervenciones para **imaginar** transiciones.
