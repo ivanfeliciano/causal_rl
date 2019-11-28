@@ -7,21 +7,23 @@ import numpy as np
 import gym
 import matplotlib.pyplot as plt
 
-THRESHOLD = 9
+THRESHOLD = 9.7
 MOD_EPISODE = 1
 
 class QLearning(object):
 	"""docstring for QLearning"""
-	def __init__(self, episodes=1500, alpha=0.8, gamma=0.95, epsilon=0.2):
+	def __init__(self, episodes=1500, alpha=0.8, gamma=0.95, epsilon=1.0):
 		self.episodes = episodes
 		self.alpha = alpha
 		self.gamma = gamma
 		self.true_action_prob = 0.7
 		self.epsilon = epsilon
-		self.env = gym.make('Taxi-v2')
+		self.env = gym.make('Taxi-v3')
 		self.number_of_actions = self.env.action_space.n
 		self.number_of_states = self.env.observation_space.n
 		self.Q = np.zeros([self.number_of_states, self.number_of_actions])
+		self.eps_min = 0.01
+		self.eps_decay = 0.995
 
 	def epsilon_greedy(self, state):
 		eps = np.random.uniform()
@@ -30,6 +32,7 @@ class QLearning(object):
 		return self.env.action_space.sample(), None
 	def train(self, plot_name="QLearning", use_reward_feedback=False, stochastic=False):
 		state = self.env.reset()
+		optimal_reward_episodes = []
 		list_of_individual_episode_reward = []
 		avg_reward_all_training = []
 		flag = True
@@ -52,16 +55,21 @@ class QLearning(object):
 				if use_reward_feedback and _ != None: reward *= _
 				if done: self.Q[new_state] = np.ones(self.number_of_actions) * (reward * 10)
 				self.Q[state, action] = self.Q[state, action] + self.alpha * (reward + self.gamma * np.max(self.Q[new_state, :]) - self.Q[state, action])
+				if self.epsilon > self.eps_min:
+					self.epsilon *= self.eps_decay
 				state = new_state
 				reward_episode += reward
 			if not threshold_reached and reward_episode >= THRESHOLD:
 				threshold_reached = True
 				time_to_reach_t = episode
+			if reward_episode >= THRESHOLD:
+				optimal_reward_episodes.append(episode)
 			list_of_individual_episode_reward.append(reward_episode)
 			if episode == 0 or (episode + 1) % MOD_EPISODE == 0:
 				ave_reward = np.mean(list_of_individual_episode_reward)
 				avg_reward_all_training.append(ave_reward)
 				list_of_individual_episode_reward = []
+		# print(optimal_reward_episodes)
 		plot_x_axis = MOD_EPISODE * (np.arange(len(avg_reward_all_training)) + 1)
 		plt.plot(plot_x_axis, avg_reward_all_training, label=plot_name)
 		plt.xlabel('Episodes')

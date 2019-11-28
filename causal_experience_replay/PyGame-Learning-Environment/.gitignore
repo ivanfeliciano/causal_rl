@@ -1,0 +1,7 @@
+/docs/_build
+/docs/_templates
+*.pyc
+/examples/*.png
+*.swp
+*.egg-info
+/logs/
