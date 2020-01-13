@@ -104,6 +104,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+mujoco_env/
 
 # Spyder project settings
 .spyderproject

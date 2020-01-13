@@ -7,7 +7,7 @@ import numpy as np
 import gym
 import matplotlib.pyplot as plt
 
-THRESHOLD = 9.7
+THRESHOLD = -75
 MOD_EPISODE = 1
 
 class QLearning(object):
@@ -59,9 +59,9 @@ class QLearning(object):
 					self.epsilon *= self.eps_decay
 				state = new_state
 				reward_episode += reward
-			if not threshold_reached and reward_episode >= THRESHOLD:
-				threshold_reached = True
-				time_to_reach_t = episode
+			# if not threshold_reached and reward_episode >= THRESHOLD:
+			# 	threshold_reached = True
+			# 	time_to_reach_t = episode
 			if reward_episode >= THRESHOLD:
 				optimal_reward_episodes.append(episode)
 			list_of_individual_episode_reward.append(reward_episode)
@@ -79,7 +79,7 @@ class QLearning(object):
 		plt.savefig(plot_name + ".jpg")     
 		plt.close()
 		# print("Time to reach t =  {}".format(time_to_reach_t))
-		return avg_reward_all_training, time_to_reach_t
+		return avg_reward_all_training, optimal_reward_episodes
 	def test(self, number_of_tests=1):
 		for i in range(number_of_tests):
 			state = self.env.reset()

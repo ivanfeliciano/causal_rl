@@ -18,6 +18,9 @@ class DDQN:
         """ Initialization
         """
         self.flag = True
+        self.stochastic = args.stochastic
+        self.prob = 0.75
+
         # Environment and DDQN parameters
         self.with_per = args.with_per
         self.action_dim = action_dim
@@ -42,10 +45,6 @@ class DDQN:
     def policy_action(self, s):
         """ Apply an espilon-greedy policy to pick next action
         """
-        if self.flag:
-            print("Aqui debo meter las reglas")
-            self.flag = not self.flag
-            print(s)
         if random() <= self.epsilon:
             return randrange(self.action_dim)
         else:
@@ -109,13 +108,13 @@ class DDQN:
 
             # Gather stats every episode for plotting
             if(args.gather_stats):
-                mean, stdev = gather_stats(self, env)
+                mean, stdev = gather_stats(self, env, self.stochastic)
                 results.append([e, mean, stdev])
 
             # Export results for Tensorboard
-            score = tfSummary('score', cumul_reward)
-            summary_writer.add_summary(score, global_step=e)
-            summary_writer.flush()
+            # score = tfSummary('score', cumul_reward)
+            # summary_writer.add_summary(score, global_step=e)
+            # summary_writer.flush()
 
             # Display score
             tqdm_e.set_description("Score: " + str(cumul_reward))
