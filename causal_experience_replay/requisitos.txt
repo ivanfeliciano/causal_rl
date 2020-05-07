@@ -1,0 +1,13 @@
+atari-py==0.2.6
+cloudpickle==1.2.2
+future==0.18.2
+gym==0.15.3
+-e git+git@github.com:ivanfeliciano/causal_rl.git@22ac9d10c6c487bb9379120ccb453f619af86114#egg=gym_ple&subdirectory=causal_experience_replay/gym-ple
+numpy==1.17.3
+opencv-python==4.1.1.26
+Pillow==6.2.1
+-e git+git@github.com:ivanfeliciano/causal_rl.git@22ac9d10c6c487bb9379120ccb453f619af86114#egg=ple&subdirectory=causal_experience_replay/PyGame-Learning-Environment
+pygame==1.9.6
+pyglet==1.3.2
+scipy==1.3.1
+six==1.13.0

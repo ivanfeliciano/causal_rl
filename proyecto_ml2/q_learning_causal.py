@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import random
 import numpy as np
 from q_learning import QLearning
 
@@ -60,6 +60,13 @@ class QLearningCausal(QLearning):
 			if best != [-100000, -100000, -100000, -100000]:
 				return np.argmax(best), -1
 			return np.argmax(self.Q[state, :]), None
+		best = []
+		if counterfactual(state_decoded, 0, "southMove"): best.append(0)
+		if counterfactual(state_decoded, 1, "northMove"): best.append(1)
+		if counterfactual(state_decoded, 2, "eastMove"): best.append(2)
+		if counterfactual(state_decoded, 3, "westMove"): best.append(3)
+		if len(best) > 0:
+			return random.choice(best), -1
 		return self.env.action_space.sample(), None
 def main():
 	q = QLearningCausal()
