@@ -1,5 +1,23 @@
 import numpy as np
 
+from PIL import Image
+import cv2
+
+from rl.policy import EpsGreedyQPolicy
+
+def convert_arr(array, num):
+    five_switches = [2, 6, 4, 8, 0]
+    seven_switches = [4, 2, 0, 1, 8, 6, 7]
+    nine_switches = [5, 3, 4, 2, 0, 1, 8, 6, 7]
+    ans = [0 for _ in range(num)]
+    for i in range(num):
+        if num == 5:
+            if array[five_switches[i]] == 1: ans[i] = 1
+        if num == 7:
+            if array[seven_switches[i]] == 1: ans[i] = 1
+        if num == 9:
+            if array[nine_switches[i]] == 1: ans[i] = 1
+    return ans
 class Policy(object):
     def __init__(self, eps_max, eps_min, eps_test, nb_steps, env, causal=False, ratio=0.5):
         self.eps_max = eps_max
@@ -44,5 +62,40 @@ class EpsilonGreedy(Policy):
         for target in targets:
             actions = self.env.causal_structure.get_causes(target)
             if len(actions) > 0:
+                return actions.pop()      
+        return self.env.sample_action()
+
+class EpsilonGreedyDQN(EpsGreedyQPolicy):
+    def __init__(self, env, num, model=None, causal=False):
+        super().__init__()
+        self.env = env
+        self.use_causal_info = causal
+        self.model = model
+        self.num = num
+        self.counter = 0
+    def select_action(self, q_values, observation):
+        assert q_values.ndim == 1
+        nb_actions = q_values.shape[0]
+        r = np.random.uniform()
+        if r > self.eps:
+            return np.argmax(q_values)
+        if not self.use_causal_info:
+            return self.env.sample_action()
+        r = np.random.uniform()
+        if r > 0.9:
+            return self.env.sample_action()
+        goal = self.env.get_goal()
+        lights_on = self.model.predict(observation.reshape(1, 84, 84, 1))
+        macro_state = np.rint(lights_on[0]).astype(int)
+        macro_state = convert_arr(macro_state, self.num)
+        targets = []
+        for i in range(len(goal)):
+            if goal[i] == 1 and macro_state[i] == 0:
+                targets.append(i + self.env.num)
+        np.random.shuffle(targets)
+        for target in targets:
+            actions = self.env.causal_structure.get_causes(target)
+            if len(actions) > 0:
+                self.counter += 1
                 return actions.pop()      
         return self.env.sample_action()

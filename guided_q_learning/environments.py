@@ -23,11 +23,12 @@ class Environment(object):
         return self.env.action_space.sample()
 
 class LightAndSwitchEnv(Environment):
-    def __init__(self, env, adj_list, stochastic=False):
+    def __init__(self, env, adj_list, stochastic=False, discrete=True):
         self.env = env
         self.num = self.env.num
         self.horizon = self.num
         self.n_actions = self.num + 1
+        self.discrete = discrete
         super().__init__(env, adj_list, stochastic)
     def init_q_table(self):
         all_states = powerset(self.num)
@@ -38,15 +39,21 @@ class LightAndSwitchEnv(Environment):
     def map_obs(self, state):
         return tuple(state[:self.num].astype(int))
     def reset(self):
-        return self.map_obs(self.env.reset())
+        if self.discrete:
+            return self.map_obs(self.env.reset()[0])
+        return self.env.reset()[1]
     def get_goal(self):
         return self.env.goal
     def get_state(self):
-        return self.env._get_obs()[:self.num]
+        if self.discrete:
+            return self.env._get_obs()[0][:self.num]
+        return self.env._get_obs()[1]
     def step(self, action):
         if self.stochastic and np.random.uniform() > self.true_action_prob:
             remain_actions = [i for i in range(self.n_actions) if i != action]
             action = np.random.choice(remain_actions)
         new_state, reward, done, info = self.env.step(action)
-        new_state = self.map_obs(new_state)
-        return new_state, reward, done, info
+        if self.discrete:
+            new_state = self.map_obs(new_state[0])
+            return new_state, reward, done, info
+        return new_state[1], reward, done, info
