@@ -12,7 +12,7 @@ El ambiente de un agente puede estar gobernado po un modelo causal. Dadas las ac
 
 Un agente tiene el control de N interruptores que controlan N luces en un sitio. Cada acción a ∈ A corresponde a mover un interruptor o a no mover ninguno, por lo tanto |A| = N + 1. El agente puede percibir dos tipos de señales del ambiente, una imagen s con una vista cenital del sitio, o variables en forma de vectores binarios x ∈ {0, 1}^N que codifican las luces prendidas, donde x_i = 1 si la luz en la zona i está prendida, de otro modo toma el valor x_i = 0. Existen tres tipos de estructuras subyacentes entre los interruptores y las zonas del sitio.  Poner imágen. En la siguiente imagen se muestra un ambiente con N = 5, una estructura D de tipo uno a uno. 
 
-<div style="text-align:center">
+<div align="center">
 <img src="img/anima.gif"/>
 </div>
 
