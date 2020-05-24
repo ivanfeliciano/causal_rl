@@ -292,10 +292,10 @@ class DQN(object):
         weights_filename = 'models/{}_weights.h5f'.format(filename)
         checkpoint_weights_filename = 'models/' + filename + '_weights_{step}.h5f'
         log_filename = 'logs/{}_log.json'.format(filename)
-        callbacks = [ModelIntervalCheckpoint(checkpoint_weights_filename, interval=self.mod_episode)]
-        callbacks += [FileLogger(log_filename, interval=self.mod_episode)]
+        # callbacks = [ModelIntervalCheckpoint(checkpoint_weights_filename, interval=self.mod_episode)]
+        callbacks = [FileLogger(log_filename, interval=self.mod_episode)]
         self.avg_reward = self.dqn_agent.fit(self.env, callbacks=callbacks, action_repetition=0, episodes=self.episodes, log_interval=self.mod_episode, mod_episode=self.mod_episode)
-        self.dqn_agent.save_weights(weights_filename, overwrite=True)
+        # self.dqn_agent.save_weights(weights_filename, overwrite=True)
         print("Steps {}".format(self.dqn_agent.step))
         print("Times Used CM {}".format(self.policy.inner_policy.counter))
         # self.plot_avg_reward()

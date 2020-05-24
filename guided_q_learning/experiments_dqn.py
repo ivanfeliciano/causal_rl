@@ -1,7 +1,7 @@
 import time
 import os
 import argparse
-from copy import deepcopy
+from copy import deepcopy, copy
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,39 +40,48 @@ stochastic = args.stochastic
 
 model = load_model('models/multilabel_classifier84.h5')
 
-envs = [
-    LightEnv(horizon=horizon, num=num, structure=structure),
-    LightEnv(horizon=horizon, num=num, structure=structure),
-    ]
-
+env = LightEnv(horizon=horizon, num=num, structure=structure)
 rewards = np.array([[None for _ in range(number_of_experiments)] for _ in range(4)])
 processor = LightEnvProcessor()
 for config in range(number_of_experiments):
-    for idx in range(len(envs)):
-        envs[idx].keep_struct = False
-        envs[idx].reset()
-        envs[idx].keep_struct = True
+    env.keep_struct = False
+    env.reset()
+    env.keep_struct = True
     print("Running training on new struct and new goal. {} / {}".format(config + 1, number_of_experiments))
-    q_adj_list = aj_to_adj_list(envs[0].aj)
-    full_adj_list = aj_to_adj_list(envs[1].aj)
+    full_adj_list = aj_to_adj_list(env.aj)
+    incomplete_adj_list = remove_edges(deepcopy(full_adj_list))
+    incorrect_adj_list = to_wrong_graph(deepcopy(full_adj_list), n_effects=num)
 
-    vanilla_env = LightAndSwitchEnv(envs[0], q_adj_list, discrete=False)
-    full_info_environment = LightAndSwitchEnv(envs[1], full_adj_list, discrete=False)
+    vanilla_env = LightAndSwitchEnv(copy(env), full_adj_list, discrete=False)
+    full_info_environment = LightAndSwitchEnv(copy(env), full_adj_list, discrete=False)
+    partial_info_environment = LightAndSwitchEnv(copy(env), incomplete_adj_list, discrete=False)
+    wrong_info_environment = LightAndSwitchEnv(copy(env), incorrect_adj_list, discrete=False)
+
     eps_policy = LinearAnnealedPolicy(EpsilonGreedyDQN(vanilla_env, num, None, False),\
                                             attr='eps', value_max=1., value_min=.1,\
                                             value_test=.05, nb_steps=horizon)
-    causal_eps_policy = LinearAnnealedPolicy(EpsilonGreedyDQN(vanilla_env, num, model, True),\
+    causal_eps_policy = LinearAnnealedPolicy(EpsilonGreedyDQN(full_info_environment, num, model, True),\
                                             attr='eps', value_max=1., value_min=.1,\
                                             value_test=.05, nb_steps=horizon)
+    partial_causal_eps_policy = LinearAnnealedPolicy(EpsilonGreedyDQN(partial_info_environment, num, model, True),\
+                                            attr='eps', value_max=1., value_min=.1,\
+                                            value_test=.05, nb_steps=horizon)
+    wrong_causal_eps_policy = LinearAnnealedPolicy(EpsilonGreedyDQN(wrong_info_environment, num, model, True),\
+                                            attr='eps', value_max=1., value_min=.1,\
+                                            value_test=.05, nb_steps=horizon)                                
     if draw:
         dir_name = "./drawings/{}_{}_{}".format(structure, num, "sto" if stochastic else "det")
         if not os.path.exists(dir_name):
             os.makedirs(dir_name)
-        full_info_environment.causal_structure.draw_graph("{}/full_{}".format(dir_name, config)) 
+        full_info_environment.causal_structure.draw_graph("{}/dqn_full_{}".format(dir_name, config)) 
+        partial_info_environment.causal_structure.draw_graph("{}/dqn_partial_{}".format(dir_name, config)) 
+        wrong_info_environment.causal_structure.draw_graph("{}/dqn_wrong_{}".format(dir_name, config))
+
 
     vanilla_q_learning = DQN(vanilla_env, num + 1, processor, eps_policy, episodes, mod_episode=mod_episode)
     causal_q_learning = DQN(full_info_environment, num + 1, processor, causal_eps_policy, episodes, mod_episode=mod_episode)
-
+    partial_causal_q_learning = DQN(partial_info_environment, num + 1, processor, causal_eps_policy, episodes, mod_episode=mod_episode)
+    wrong_causal_q_learning = DQN(wrong_info_environment, num + 1, processor, causal_eps_policy, episodes, mod_episode=mod_episode)
     # t_start = time.time()
     rewards[0][config] = np.array(vanilla_q_learning.train())
     # print("{:.2f} seconds training Q-learning".format(time.time() - t_start))
@@ -80,17 +89,19 @@ for config in range(number_of_experiments):
     rewards[1][config] = np.array(causal_q_learning.train())
     # print("{:.2f} seconds training Q-learning fully informed".format(time.time() - t_start))
     # t_start = time.time()
-    # rewards[2][config] = np.array(partial_causal_q_learning.train())
+    rewards[2][config] = np.array(partial_causal_q_learning.train())
     # print("{:.2f} seconds training Q-learning partially informed".format(time.time() - t_start))
     # t_start = time.time()
-    # rewards[3][config] = np.array(wrong_causal_q_learning.train())
+    rewards[3][config] = np.array(wrong_causal_q_learning.train())
     # print("{:.2f} seconds training Q-learning wrong informed".format(time.time() - t_start))
 
 
-mean_vectors = [_ for _ in range(2)]
-std_dev_vectors = [_ for _ in range(2)]
-labels = ["Q-learning", "Q-learning full structure"]
-for i in range(2):
+mean_vectors = [_ for _ in range(4)]
+std_dev_vectors = [_ for _ in range(4)]
+labels = ["Q-learning", "Q-learning full structure", \
+            "Q-learning partial structure", "Q-learning wrong structure"]
+
+for i in range(4):
     mean_vectors[i] = np.mean(rewards[i], axis=0)
     std_dev_vectors[i] = np.std(rewards[i], axis=0)
 

@@ -36,22 +36,23 @@ env.keep_struct = False
 env.reset()
 env.keep_struct = True
 goal_image = env.goalim
-goal_image = cv2.cvtColor(goal_image.astype('float32'), cv2.COLOR_RGB2GRAY)
-goal_image[goal_image >= .5] = 1.
-goal_image[goal_image < .5] = 0.
+goal_image = cv2.cvtColor(goal_image.astype('float32'), cv2.COLOR_BGR2RGB)
+# goal_image[goal_image >= .5] = 1.
+# goal_image[goal_image < .5] = 0.
 obs = env._get_obs(images=True)[1]
 print(env.aj)
 print("State : {}".format(env._get_obs()[0][:n_switches]))
 while True:    
-    obs = cv2.cvtColor(obs.astype('float32'), cv2.COLOR_RGB2GRAY) / 255
-    obs[obs >= .5] = 1.
-    obs[obs < .5] = 0.
-    lights_on = model.predict(obs.reshape(1, 84, 84, 1))
-    macro_state = np.rint(lights_on[0]).astype(int)
-    print("Predicted : {}".format(macro_state))
-    macro_state = convert_arr(macro_state, n_switches)
-    print("Conveted pred : {}".format(macro_state))
-    image = np.hstack((goal_image, obs))
+    obs = cv2.cvtColor(obs.astype('float32'), cv2.COLOR_BGR2RGB) / 255
+    # obs[obs >= .5] = 1.
+    # obs[obs < .5] = 0.
+    # # lights_on = model.predict(obs.reshape(1, 84, 84, 1))
+    # # macro_state = np.rint(lights_on[0]).astype(int)
+    # # print("Predicted : {}".format(macro_state))
+    # # macro_state = convert_arr(macro_state, n_switches)
+    # print("Conveted pred : {}".format(macro_state))
+    space = np.zeros((500, 100, 3)) + 255
+    image = np.hstack((obs, space, goal_image))
     cv2.imshow('Rooms', image)
     k = cv2.waitKey()
     if k == ord('q'): break
