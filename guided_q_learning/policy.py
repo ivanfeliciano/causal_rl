@@ -35,8 +35,9 @@ class Policy(object):
             value = max(self.eps_min, a * float(self.step) + b)
         else:
             value = self.eps_test
-        self.step = (self.step +  1) % self.nb_steps
-        # self.step += 1
+        # self.step = (self.step +  1) % self.nb_steps
+        self.step += 1
+        # print("eps = {}".format(value))
         return value
     def select_action(self, state, Q, training=True):
         raise NotImplementedError
@@ -50,13 +51,11 @@ class EpsilonGreedy(Policy):
         r = np.random.uniform()
         if not self.causal:
             return self.env.sample_action()
-        if r > 0.8:
-            return self.env.sample_action()
         goal = self.env.get_goal()
         macro_state = self.env.get_state()
         targets = []
         for i in range(len(goal)):
-            if goal[i] == 1 and macro_state[i] == 0:
+            if goal[i] != macro_state[i]:
                 targets.append(i + self.env.num)
         np.random.shuffle(targets)
         for target in targets:
@@ -90,7 +89,7 @@ class EpsilonGreedyDQN(EpsGreedyQPolicy):
         macro_state = convert_arr(macro_state, self.num)
         targets = []
         for i in range(len(goal)):
-            if goal[i] == 1 and macro_state[i] == 0:
+            if goal[i] != macro_state[i]:
                 targets.append(i + self.env.num)
         np.random.shuffle(targets)
         for target in targets:

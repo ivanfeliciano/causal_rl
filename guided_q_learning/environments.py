@@ -8,7 +8,7 @@ from causal_structure import CausalStructure
 from utils.lights_env_helper import powerset
 
 class Environment(object):
-    def __init__(self, env, adj_list, stochastic=False, true_action_prob=0.8):
+    def __init__(self, env, adj_list, stochastic=False, true_action_prob=0.75):
         self.stochastic = stochastic
         self.causal_structure = CausalStructure(adj_list)
         self.env = env

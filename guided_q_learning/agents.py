@@ -76,6 +76,7 @@ class QLearningAgent(object):
                 total_episode_reward += reward
                 step += 1
             rewards_per_episode.append(total_episode_reward)
+            # self.policy.step = 0
             if episode == 0 or (episode + 1) % self.mod_episode == 0:
                 rewards_per_episode = self.update_avg_reward(rewards_per_episode)
         return self.avg_reward
@@ -181,6 +182,7 @@ class AssistedDQN(DQNAgent):
                 observation = deepcopy(observation)
                 if self.processor is not None:
                     observation, r, done, info = self.processor.process_step(observation, r, done, info)
+                    # print(r, done, info)
                 callbacks.on_action_end(action)
                 reward += r
                 if nb_max_episode_steps and episode_step >= nb_max_episode_steps - 1:
@@ -294,7 +296,8 @@ class DQN(object):
         log_filename = 'logs/{}_log.json'.format(filename)
         # callbacks = [ModelIntervalCheckpoint(checkpoint_weights_filename, interval=self.mod_episode)]
         callbacks = [FileLogger(log_filename, interval=self.mod_episode)]
-        self.avg_reward = self.dqn_agent.fit(self.env, callbacks=callbacks, action_repetition=0, episodes=self.episodes, log_interval=self.mod_episode, mod_episode=self.mod_episode)
+        self.avg_reward = self.dqn_agent.fit(self.env, callbacks=callbacks, action_repetition=0, episodes=self.episodes, log_interval=self.mod_episode, mod_episode=self.mod_episode,
+        nb_max_episode_steps=self.env.horizon)
         # self.dqn_agent.save_weights(weights_filename, overwrite=True)
         print("Steps {}".format(self.dqn_agent.step))
         print("Times Used CM {}".format(self.policy.inner_policy.counter))
