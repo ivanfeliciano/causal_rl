@@ -135,3 +135,9 @@ models/
 logs/
 
 .vscode/
+
+
+rewards_data/
+drawings/
+
+*.out

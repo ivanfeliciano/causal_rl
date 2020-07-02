@@ -36,7 +36,7 @@ number_of_experiments = args.experiments if args.experiments > 0 else (1 << num)
 horizon = num
 stochastic = args.stochastic
 pmod = args.pmod
-
+env_config = "stochastic" if stochastic else "deterministic"
 env = LightEnv(horizon=horizon, num=num, structure=structure)
 
 rewards = np.array([[None for _ in range(number_of_experiments)] for _ in range(4)])
@@ -68,7 +68,7 @@ for config in range(number_of_experiments):
     partial_causal_eps_policy = EpsilonGreedy(1, 0.1, 0.1, eps_partition, partial_info_environment, True)
     wrong_causal_eps_policy = EpsilonGreedy(1, 0.1, 0.1, eps_partition, wrong_info_environment, True)
     if draw:
-        dir_name = "./drawings/{}_{}_{}_{}".format(structure, num, pmod, "sto" if stochastic else "det")
+        dir_name = "./drawings/{}_{}_{}_{}".format(structure, num, pmod, env_config)
         if not os.path.exists(dir_name):
             os.makedirs(dir_name)
         full_info_environment.causal_structure.draw_graph("{}/full_{}".format(dir_name, config)) 
@@ -80,22 +80,22 @@ for config in range(number_of_experiments):
     partial_causal_q_learning = QLearningAgent(partial_info_environment, partial_causal_eps_policy, episodes=episodes, mod_episode=mod_episode)
     wrong_causal_q_learning = QLearningAgent(wrong_info_environment, wrong_causal_eps_policy, episodes=episodes, mod_episode=mod_episode)
 
-    # t_start = time.time()
+    t_start = time.time()
     print("Running vanilla_q_learning")
     rewards[0][config] = np.array(vanilla_q_learning.train())
-    # print("{:.2f} seconds training Q-learning".format(time.time() - t_start))
-    # t_start = time.time()
+    print("{:.2f} seconds training Q-learning".format(time.time() - t_start))
+    t_start = time.time()
     print("Running causal_q_learning")
     rewards[1][config] = np.array(causal_q_learning.train())
-    # print("{:.2f} seconds training Q-learning fully informed".format(time.time() - t_start))
-    # t_start = time.time()
+    print("{:.2f} seconds training Q-learning fully informed".format(time.time() - t_start))
+    t_start = time.time()
     print("Running partial_causal_q_learning")
     rewards[2][config] = np.array(partial_causal_q_learning.train())
-    # print("{:.2f} seconds training Q-learning partially informed".format(time.time() - t_start))
-    # t_start = time.time()
+    print("{:.2f} seconds training Q-learning partially informed".format(time.time() - t_start))
+    t_start = time.time()
     print("Running wrong_causal_q_learning")
     rewards[3][config] = np.array(wrong_causal_q_learning.train())
-    # print("{:.2f} seconds training Q-learning wrong informed".format(time.time() - t_start))
+    print("{:.2f} seconds training Q-learning wrong informed".format(time.time() - t_start))
 
 
 mean_vectors = [_ for _ in range(4)]
@@ -106,15 +106,15 @@ for i in range(4):
     mean_vectors[i] = np.mean(rewards[i], axis=0)
     std_dev_vectors[i] = np.std(rewards[i], axis=0)
 
-np.save("./rewards_data/latest_experiments/{}_{}_{}_{}_{}_eps_partition_{}".format(number_of_experiments, num, structure, episodes, "sto" if stochastic else "det", partition), rewards)
+np.save("./rewards_data/latest_experiments/{}_{}_{}_{}_{}_eps_partition_{}".format(number_of_experiments, num, structure, episodes, env_config, partition), rewards)
 
 x_axis = mod_episode * (np.arange(len(mean_vectors[0])))
-dir_name_plot = "plots/qlearning/fixedgoal/{}/{}/{}/{}".format(structure, "stochastic" if stochastic else "deterministic", num, pmod)
+dir_name_plot = "plots/qlearning/fixedgoal/{}/{}/{}/{}".format(structure, env_config, num, pmod)
 
 if not os.path.exists(dir_name_plot):
     os.makedirs(dir_name_plot)
 plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels,\
-    "Average reward comparison {} {}".format(num, structure), "{}/comparison_{}_{}_{}_{}_{}_eps_partition_{}".format(dir_name_plot, number_of_experiments, num, structure, episodes,"sto" if stochastic else "det", partition))
+    "Average reward comparison {} {}".format(num, structure), "{}/comparison_{}_{}_{}_{}_{}_eps_partition_{}".format(dir_name_plot, number_of_experiments, num, structure, episodes,env_config, partition))
 # a = vanilla_q_learning.test()
 # b = causal_q_learning.test()
 # c = partial_causal_q_learning.test()
