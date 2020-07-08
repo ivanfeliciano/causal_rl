@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot_rewards(x_axis, mean_vecs, std_dev_vectors, labels, title, filename):
+def plot_rewards(x_axis, mean_vecs, std_dev_vectors, labels, filename):
     fig, ax1 = plt.subplots()
     ax1.set_xlabel('Episodios')
     ax1.set_ylabel('Recompensa promedio')

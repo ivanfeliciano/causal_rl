@@ -124,8 +124,7 @@ for i in range(4):
 
 
 x_axis = mod_episode * (np.arange(len(mean_vectors[0])))
-plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels,\
-    "Average reward comparison {} {}".format(num, structure), "plots/comparison_dqn_{}_{}_{}_{}_{}".format(number_of_experiments, num, structure, episodes,"sto" if stochastic else "det"))
+plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels, "plots/comparison_dqn_{}_{}_{}_{}_{}".format(number_of_experiments, num, structure, episodes,"sto" if stochastic else "det"))
 np.save("./rewards_data/dqn_{}_{}_{}_{}_{}".format(number_of_experiments, num, structure, episodes,"sto" if stochastic else "det"), rewards)
 # a = vanilla_q_learning.test()
 # b = causal_q_learning.test()

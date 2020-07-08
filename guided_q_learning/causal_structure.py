@@ -17,7 +17,7 @@ class CausalStructure(object):
     def draw_graph(self, filename="graph"):
         pos = nx.bipartite_layout(self.graph, self.causes)
         nx.draw(self.graph, pos=pos, with_labels=True)
-        plt.savefig("{}.png".format(filename))
+        plt.savefig("{}.pdf".format(filename))
         # plt.show()
         plt.close()
     def get_causes(self, node, shuffle=True, threshold=0.5):
@@ -30,10 +30,9 @@ class CausalStructure(object):
 
 if __name__ == "__main__":
     adj = {
-        1: [(2, 1), (3, 1)],
-        2: [(3, 1), (4, 1)],
-        4: [(3, 1)],
-        5: [(2, 1)]
+        1: [(4, 1), (5, 1)],
+        2: [(4, 1)],
+        3: [(6, 1)],
     }
     graph = CausalStructure(adj)
     print(graph.get_causes(2))
