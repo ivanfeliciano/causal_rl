@@ -127,17 +127,26 @@ ser una de tres estructuras ya mencionadas.
 Por ahora el número de interruptores <em>N</em>, y por lo tanto de luces, puede ser 5, 7 o 9. 
 </p>
 
-### Ambiente discreto 
+# Cosas por hacer
 
-Explicar de qué va, qué estoy trabajando directamente
-con s=x y que Q es una tabla.
-Poner las gráficas
+## Programación
 
-### Ambiente de imágenes 
++ Programar pruebas estadísticas para Taxi.
++ Módulo para análizar los archivos de recompensas de los experimentos. Pero, ¿qué quiero analizar? Por ahora:
+	<!-- + Graficar las recompensas promedio -->
+	+ Calcular recomensas acumuladas
+	+ Buscar qué pruebas estadísticas son adecuadas para los resultados que tengo. Tal vez puedo calcular algo aproximado a una recompensa óptima?
++ Automatizar los experimentos para el caso continuo.
++ Checar ese mensaje de INVALID KEY de mujoco.
 
-Decir que aquí estoy trabajando con imágenes,por lo tanto necesito la función phi.
+## Tesis
 
-Hablar de la función phi, es un clasificador multi etiqueta.
-Imágenes tal vez
++ Rev 1: 
+	+ Justificación formal más sólida
+	+ Los experimentos podrían enriquecerse para tener algo de más solidez en su validez por concurrencia.
+	+ El experimento de la Sec 5.2.5 es bastante interesante.
+	+ Terminar bien el capítulo 6 de conclusiones que en su formato actual son muy someras, y pulir lo que resta de los anteriores; por ejemplo, la discusión en 5.3 es más bien una repetición de los resultados más que una discusión que aporte validez nomológica, y los marcos teórico y referencial aún pueden enriquecerse.
+	+ Falta la estadística inferencial que corresponda.
+	+ Dependiendo del tiempo, podrían afinarse algunos experimentos, pero no lo veo como algo que pueda poner en riesgo la graduación del estudiante.
 
-Poner gráficas.
++ Sup 1:
