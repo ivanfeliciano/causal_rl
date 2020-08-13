@@ -1,4 +1,4 @@
-<h1>Experiment-Delta-Epsilon</h1><h2>deterministic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+<h1>Experiment-Delta-Epsilon</h1><h2>deterministic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -44,7 +44,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -90,7 +90,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -136,7 +136,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -182,7 +182,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -228,7 +228,7 @@
     <td>$0.0017$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -274,7 +274,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -320,7 +320,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -366,7 +366,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -412,7 +412,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -458,7 +458,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -504,7 +504,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -550,7 +550,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -596,7 +596,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -642,7 +642,7 @@
     <td>$0.0182$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -688,7 +688,7 @@
     <td>$0.0001$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -734,7 +734,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -780,7 +780,7 @@
     <td>$0.0033$</td>
     <td>rejected</td>
   </tr>
-</table><h2>deterministic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>deterministic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -826,7 +826,7 @@
     <td>$0.8933$</td>
     <td>fail to reject</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -872,7 +872,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -918,7 +918,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -964,7 +964,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1010,7 +1010,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1056,7 +1056,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 many to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1102,7 +1102,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1148,7 +1148,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1194,7 +1194,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1240,7 +1240,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1286,7 +1286,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1332,7 +1332,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to many N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1378,7 +1378,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 18750 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1424,7 +1424,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 5 experiments 10 episodes 5000 eps 6250 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1470,7 +1470,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 26250 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1516,7 +1516,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 7 experiments 10 episodes 5000 eps 8750 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1562,7 +1562,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 22500 delta 0.25</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>
@@ -1608,7 +1608,7 @@
     <td>$0.0000$</td>
     <td>rejected</td>
   </tr>
-</table><h2>stochastic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><iframe src='results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf'' width='50%' height='500px'></iframe><table>
+</table><h2>stochastic low 0.25 one to one N 9 experiments 10 episodes 10000 eps 67500 delta 0.75</h2><object data="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf" type="application/pdf" width="700px" height="700px"><embed src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_0.25_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.pdf">Download PDF</a>.</p></embed></object><table>
   <tr>
     <th>Algoritmo</th>
     <th>Recompensa promedio E = 100</th>

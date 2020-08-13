@@ -35,7 +35,8 @@ for file_path in onlyfiles:
 	x_axis = mod * (np.arange(len(mean_vectors[0])))
 	plot_path = join(base_dir_plots, name)
 	plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels, plot_path)
-	html_text += "<iframe src='{}.pdf'' width='50%' height='500px'></iframe>".format(plot_path)
+	# html_text += "<iframe src='{}.pdf'' width='50%' height='500px'></iframe>".format(plot_path)
+	html_text += '<object data="{}.pdf" type="application/pdf" width="700px" height="700px"><embed src="{}.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="{}.pdf">Download PDF</a>.</p></embed></object>'.format(plot_path, plot_path, plot_path)
 	mean_vectors, std_dev_vectors = compute_mean_and_std_dev(rewards)
 	mean_eval, pvalues = compute_stat_test(mean_vectors, n_eval_episodes)
 
