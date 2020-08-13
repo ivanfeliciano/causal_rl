@@ -1,39 +1,24 @@
-EPISODES=5000
-MOD=100
+EPISODES=200
+MOD=1
 EXP=10
-# ST=many_to_one
+PARTITION=75
+DIR_NAME=/home/ivan/Documentos/causal_rl/guided_q_learning/results_thesis/light_switches/dqn
 
-# ST=one_to_many
+
 ST=one_to_one
-time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition 100
-time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition 50
-# time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP 
-# time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP
+time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
 
+ST=one_to_many
 
-# time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --draw
-# time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw
-# time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw
+time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
 
+ST=many_to_one
 
-# ST=many_to_one
+time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
+time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --partition $PARTITION --basedir $DIR_NAME --draw --stochastic
 
-# time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --draw --experiments $EXP
-# time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --draw
-# time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --draw
-
-
-# # time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --draw
-# # time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw
-# # time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw
-
-# ST=one_to_many
-
-# time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --draw --experiments $EXP
-# time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --draw
-# time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --experiments $EXP --draw
-
-
-# # time python experiments_dqn.py --num 5 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --draw
-# # time python experiments_dqn.py --num 7 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw
-# # time python experiments_dqn.py --num 9 --structure $ST --episodes $EPISODES --mod $MOD --stochastic --experiments $EXP --draw

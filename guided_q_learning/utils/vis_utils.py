@@ -11,3 +11,4 @@ def plot_rewards(x_axis, mean_vecs, std_dev_vectors, labels, filename):
                         alpha=0.2)
     plt.legend(loc='best')
     plt.savefig("{}.pdf".format(filename), bbox_inches='tight')
+    plt.close()

@@ -135,7 +135,8 @@ Por ahora el número de interruptores <em>N</em>, y por lo tanto de luces, puede
 + Módulo para análizar los archivos de recompensas de los experimentos. Pero, ¿qué quiero analizar? Por ahora:
 	<!-- + Graficar las recompensas promedio -->
 	+ Calcular recomensas acumuladas
-	+ Buscar qué pruebas estadísticas son adecuadas para los resultados que tengo. Tal vez puedo calcular algo aproximado a una recompensa óptima?
+	+ Buscar qué pruebas estadísticas son adecuadas para los resultados que tengo.
+	+ Tal vez puedo calcular algo aproximado a una recompensa óptima?
 + Automatizar los experimentos para el caso continuo.
 + Checar ese mensaje de INVALID KEY de mujoco.
 
