@@ -12,6 +12,9 @@ from utils.performance_utils import cohend, welch_ttest
 def avg_rwd_last_t_episodes(rewards, t=100):
 	return np.mean(rewards[:, -t:])# - np.var(rewards[:, -t:])
 
+def preprocess_np_arrays(rewards):
+	return [np.stack(r, axis=0) for r in rewards]
+
 def max_streaks(rewards, threshold, streak_size):
 	streaks = []
 	for rwd in rewards:
@@ -33,45 +36,66 @@ def max_streaks(rewards, threshold, streak_size):
 		else:
 			streaks.append([init_streak, max_len])
 	return np.array(streaks)
-def test(x, y):
-	# stat, p = stats.mannwhitneyu(x, y)
-	stat, p = stats.ttest_ind(x, y, equal_var=False)
-	print(f"t={stat}, p={p}")
-	alpha = 0.05
-	if p > alpha:
-		print('Same distribution (fail to reject H0)')
-	else:
-		print('Different distribution (reject H0)')
-	effect = cohend(x, y)
-	alpha = 0.05
-	analysis = TTestIndPower()
-	power = analysis.solve_power(effect, power=None, nobs1=len(x), ratio=1.0, alpha=alpha)
-	# samples = analysis.solve_power(effect, power=0.8, nobs1=None, ratio=1.0, alpha=alpha)
-	dof = welch_ttest(np.array(x), np.array(y))
-	print(f"effect: {effect:.2f}")
-	print(f"power: {power:.2f}")
-	# print(f"samples: {samples:.2f}")
-	print(f"degrees of freedom: {dof:.2f}")
 
-def process_dir(directory):
+def test(x, y, alpha=0.05):
+	t, p = stats.ttest_ind(x, y, equal_var=False)
+	df = welch_ttest(np.array(x), np.array(y))
+	decision = "$h_0$ aceptada" if p >= alpha else "$h_0$ rechazada"
+	effect = cohend(y, x)
+	# analysis = TTestIndPower()
+	# power = analysis.solve_power(effect, power=None, nobs1=len(x), ratio=1.0, alpha=alpha)
+	return [t, df, p, decision, effect]
+
+def local_results_to_html(filename, test_table):
+	"""
+	docstring
+	"""
+	name = filename[:-4].replace(".", "")
+	splited_name = name.strip().split("_")
+	delta = float(splited_name[-1]) / (float(splited_name[11]) * float(splited_name[7]))
+	title = f"<h2>{' '.join(name.strip().split('_')[:-2])} delta {delta:.2f}</h2>"
+	header = ["Algoritmo", "M", "SD", "t", "df", "p", "Decisión", "d de Cohen"]
+	table = array_to_html_table(header, test_table)
+
+def run_tests(results_storage, labels, threshold, rewards, streak_size, num):
+	"""
+	docstring
+	"""
+	vanilla_q_streak = max_streaks(rewards[0], threshold, streak_size) * 50
+	results_storage[labels[0]][num] = np.concatenate((results_storage[labels[0]][num], vanilla_q_streak[:, 0]), axis=None)
+	table = []
+	print()
+	for i in range(len(rewards)):
+		causal_streak = max_streaks(rewards[i], threshold, streak_size) * 50
+		results_storage[labels[i]][num] = np.concatenate((results_storage[labels[i]][num], causal_streak[:, 0]), axis=None)
+		table.append([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
+									+ test(causal_streak[:, 0], vanilla_q_streak[:, 0]))
+		print([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
+									+ test(causal_streak[:, 0], vanilla_q_streak[:, 0]))
+	return table
+
+def create_storage(labels):
+	results_storage = dict(one_to_one={}, many_to_one={}, one_to_many={})
+	for struct in results_storage:
+		results_storage[struct] = {l : {5 : [], 7 : [], 9 : []} for l in labels}
+	return results_storage
+
+def get_struct_and_num(filename):
+	splited_name = filename.strip().split("_")
+	struct = "_".join(splited_name[3:6])
+	num = splited_name[7]
+	return struct, int(num)
+def process_dir(directory, labels, size=10):
 	"""
 	docstring
 	"""
 	files_list = sorted([f for f in listdir(input_directory) if isfile(join(input_directory, f))])
+	memory = create_storage(labels)
 	for filepath in files_list:
-		name = filepath[:-4].replace(".", "")
-		splited_name = name.strip().split("_")
-		delta = float(splited_name[-1]) / (float(splited_name[11]) * float(splited_name[7]))
-		rewards = read_mat_from_file(join(input_directory, filepath))
-		rewards_vanilla_q_learning = np.stack(rewards[0], axis=0)
-		rewards_causal_q_learning = np.stack(rewards[1], axis=0)
-		solving_threshold = avg_rwd_last_t_episodes(rewards_vanilla_q_learning)
-		for i in [10]:
-			streaks_q = max_streaks(rewards_vanilla_q_learning, solving_threshold, i)
-			streaks_cm = max_streaks(rewards_causal_q_learning, solving_threshold, i)
-			print(streaks_q[:,0], streaks_cm[:, 0])
-			test(streaks_q[:,0], streaks_cm[:, 0])
-
+		rewards = preprocess_np_arrays(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=50))
+		solving_threshold = avg_rwd_last_t_episodes(rewards[0], t=50)
+		struct, num = get_struct_and_num(filepath)
+		table = run_tests(memory[struct], labels, solving_threshold, rewards, size, num)
 if __name__ == "__main__":
 	input_directory = sys.argv[1]
 	# output_file_name = sys.argv[2]
@@ -83,7 +107,8 @@ if __name__ == "__main__":
 	# alpha = 0.05
 	# html_text = "<h1>{}</h1>".format(experiment_name)
 	# fileout.close()
-	process_dir(input_directory)
+	labels = ["$Q_1$", "$Q_2$", "$Q_3$", "$Q_4$"]
+	process_dir(input_directory, labels)
 
 # onlyfiles = sorted([f for f in listdir(input_directory) if isfile(join(input_directory, f))])
 # labels = ["Q-learning", "Q-learning + estructura completa", \
