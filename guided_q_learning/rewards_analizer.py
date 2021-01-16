@@ -46,32 +46,43 @@ def test(x, y, alpha=0.05):
 	# power = analysis.solve_power(effect, power=None, nobs1=len(x), ratio=1.0, alpha=alpha)
 	return [t, df, p, decision, effect]
 
-def local_results_to_html(filename, test_table):
+def local_results_to_html(filename, test_table, plot_path):
 	"""
 	docstring
 	"""
 	name = filename[:-4].replace(".", "")
 	splited_name = name.strip().split("_")
+	text = ""
 	delta = float(splited_name[-1]) / (float(splited_name[11]) * float(splited_name[7]))
-	title = f"<h2>{' '.join(name.strip().split('_')[:-2])} delta {delta:.2f}</h2>"
+	text += f"<h3>Ambiente: {splited_name[0]}</h3>"
+	text += f"<h3>Porcenjate de modificación: {splited_name[1]} {splited_name[2]}</h3>"
+	text += f"<h3>Tipo de estructura: {' '.join(splited_name[3:6])} </h3>"
+	text += f"<h3>N: {splited_name[7]} </h3>"
+	text += f"<h3>Simulaciones: {splited_name[9]} </h3>"
+	text += f"<h3>Episodios: {splited_name[11]} </h3>"
+	text += f"<h3>Delta: {delta} </h3>"
 	header = ["Algoritmo", "M", "SD", "t", "df", "p", "Decisión", "d de Cohen"]
-	table = array_to_html_table(header, test_table)
+	text += array_to_html_table(header, test_table)
+	# text += f"\n\n![plot]({plot_path})"
+	text += f'<img src="{plot_path}" title="{name}">'
+	return text
 
-def run_tests(results_storage, labels, threshold, rewards, streak_size, num):
+def printable_list(row):
+	return [ f"{cell:.2f}"  if type(cell) != str and type(cell) != int else cell for cell in row]
+
+def run_tests(results_storage, labels, threshold, rewards, streak_size, num, mod=50):
 	"""
 	docstring
 	"""
-	vanilla_q_streak = max_streaks(rewards[0], threshold, streak_size) * 50
+	vanilla_q_streak = max_streaks(rewards[0], threshold, streak_size) * mod
 	results_storage[labels[0]][num] = np.concatenate((results_storage[labels[0]][num], vanilla_q_streak[:, 0]), axis=None)
 	table = []
-	print()
 	for i in range(len(rewards)):
-		causal_streak = max_streaks(rewards[i], threshold, streak_size) * 50
+		causal_streak = max_streaks(rewards[i], threshold, streak_size) * mod
 		results_storage[labels[i]][num] = np.concatenate((results_storage[labels[i]][num], causal_streak[:, 0]), axis=None)
-		table.append([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
+		printable_row = printable_list([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
 									+ test(causal_streak[:, 0], vanilla_q_streak[:, 0]))
-		print([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
-									+ test(causal_streak[:, 0], vanilla_q_streak[:, 0]))
+		table.append(printable_row)
 	return table
 
 def create_storage(labels):
@@ -85,70 +96,46 @@ def get_struct_and_num(filename):
 	struct = "_".join(splited_name[3:6])
 	num = splited_name[7]
 	return struct, int(num)
-def process_dir(directory, labels, size=10):
+
+def plot_mat(mat, base_dir_plots, name, mod):
+	labels = ["Q-learning", "Q-learning + estructura completa", \
+            "Q-learning + estructura parcial", "Q-learning + estructura incorrecta"]
+	mean_vectors, std_dev_vectors = compute_mean_and_std_dev(mat)
+	x_axis = mod * (np.arange(len(mean_vectors[0])))
+	plot_path = join(base_dir_plots, name)
+	plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels, plot_path, filetype="png")
+	return plot_path + ".png"
+
+def save_str_to_doc(filename, string):
+	with open(filename, "w") as f:
+		f.writelines(string)
+
+def process_dir(input_directory, output_file_name, plot_dir, labels, mod_tests, mod_plot, experiment_name, size=10):
 	"""
 	docstring
 	"""
 	files_list = sorted([f for f in listdir(input_directory) if isfile(join(input_directory, f))])
 	memory = create_storage(labels)
+	html_str = f"<h1>{experiment_name}</h1>"
+	html_str += f"<h2>Tamaño racha: {size}"
 	for filepath in files_list:
-		rewards = preprocess_np_arrays(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=50))
+		name = filepath[:-4].replace(".", "")
+		rewards = preprocess_np_arrays(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=mod_tests))
 		solving_threshold = avg_rwd_last_t_episodes(rewards[0], t=50)
 		struct, num = get_struct_and_num(filepath)
-		table = run_tests(memory[struct], labels, solving_threshold, rewards, size, num)
+		table = run_tests(memory[struct], labels, solving_threshold, rewards, size, num, mod_tests)
+		plot_path = plot_mat(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=mod_plot), plot_dir, name, mod=mod_plot)
+		html_str += local_results_to_html(filepath, table, plot_path)
+	save_str_to_doc(output_file_name, html_str)
+	return memory
+
 if __name__ == "__main__":
 	input_directory = sys.argv[1]
-	# output_file_name = sys.argv[2]
-	# experiment_name = sys.argv[3]
-	# base_dir_plots = sys.argv[4]
-	# mod = int(sys.argv[5])
-	# n_eval_episodes = int(sys.argv[6])
-	# fileout = open(output_file_name, "w")
-	# alpha = 0.05
-	# html_text = "<h1>{}</h1>".format(experiment_name)
-	# fileout.close()
+	output_file_name = sys.argv[2]
+	experiment_name = sys.argv[3]
+	base_dir_plots = sys.argv[4]
+	mod_plots = int(sys.argv[5])
+	mod_tests = int(sys.argv[6])
+	streak_size = int(sys.argv[7])
 	labels = ["$Q_1$", "$Q_2$", "$Q_3$", "$Q_4$"]
-	process_dir(input_directory, labels)
-
-# onlyfiles = sorted([f for f in listdir(input_directory) if isfile(join(input_directory, f))])
-# labels = ["Q-learning", "Q-learning + estructura completa", \
-#             "Q-learning + estructura parcial", "Q-learning + estructura incorrecta"]
-# for file_path in onlyfiles:
-# 	name = file_path[:-4].replace(".", "")
-# 	splited_name = name.strip().split("_")
-# 	delta = float(splited_name[-1]) / (float(splited_name[11]) * float(splited_name[7]))
-# 	html_text += "<h2>{} delta {:.2f}</h2>".format(" ".join(name.strip().split("_")), delta)
-# 	rewards = read_mat_from_file(join(input_directory, file_path))
-# 	# primero grafico
-# 	mod_mat = transform_to_modulated_matrix(rewards, mod)
-# 	mean_vectors, std_dev_vectors = compute_mean_and_std_dev(mod_mat)
-# 	x_axis = mod * (np.arange(len(mean_vectors[0])))
-# 	plot_path = join(base_dir_plots, name)
-# 	plot_rewards(x_axis, mean_vectors, std_dev_vectors, labels, plot_path)
-# 	# html_text += "<iframe src='{}.pdf'' width='50%' height='500px'></iframe>".format(plot_path)
-# 	# html_text += '<object data="{}.pdf" type="application/pdf" width="700px" height="700px"><embed src="{}.pdf"><p>This browser does not support PDFs. Please download the PDF to view it: <a href="{}.pdf">Download PDF</a>.</p></embed></object>'.format(plot_path, plot_path, plot_path)
-# 	mean_vectors, std_dev_vectors = compute_mean_and_std_dev(rewards)
-# 	mean_eval, pvalues = compute_stat_test(mean_vectors, n_eval_episodes)
-
-# 	array_to_table_means = []
-# 	array_to_table_pvalues = []
-# 	best_reward_i = np.argmax([_[0] for _ in mean_eval])
-# 	i = 0
-# 	for label, value in zip(labels, mean_eval):
-# 		string = "{:.4f} \\pm {:.4f}".format(value[0], value[1])
-# 		if pvalues[i] >= alpha and i != 0:
-# 			string += "\\dagger"
-# 		if i == best_reward_i:
-# 			string = "\\mathbf{" + string + "}"
-# 		array_to_table_means.append((label, "$" + string + "$"))
-# 		i += 1
-# 	for label, value in zip(labels, pvalues):
-# 		is_rejected = "rejected" if value < alpha else "fail to reject"
-# 		array_to_table_pvalues.append((label, "${:.4f}$".format(value), is_rejected))
-# 	header = ["Algoritmo", "Recompensa promedio E = {}".format(n_eval_episodes)]
-# 	html_text += array_to_html_table(header, array_to_table_means)
-# 	header = ["Algoritmo", "pvalue vs Q-learning"]
-# 	html_text += array_to_html_table(header, array_to_table_pvalues)
-# fileout.writelines(html_text)
-# fileout.close()
-#leer archivos de carpeta
+	memory = process_dir(input_directory, output_file_name, base_dir_plots, labels, mod_tests, mod_plots, experiment_name, size=streak_size)
