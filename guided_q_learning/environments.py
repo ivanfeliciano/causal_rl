@@ -29,6 +29,7 @@ class LightAndSwitchEnv(Environment):
         self.horizon = self.num
         self.n_actions = self.num + 1
         self.discrete = discrete
+        self.structure = env.structure
         super().__init__(env, adj_list, stochastic)
     def init_q_table(self):
         all_states = powerset(self.num)
@@ -48,6 +49,12 @@ class LightAndSwitchEnv(Environment):
         if self.discrete:
             return self.env._get_obs()[0][:self.num]
         return self.env._get_obs()[1]
+    def get_switches_state(self):
+        return self.env.state
+    def get_masterswitch(self):
+        if self.structure == "masterswitch":
+            return self.env.ms
+        return self.sample_action()
     def step(self, action):
         if self.stochastic and np.random.uniform() > self.true_action_prob:
             remain_actions = [i for i in range(self.n_actions) if i != action]

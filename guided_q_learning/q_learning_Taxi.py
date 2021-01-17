@@ -10,23 +10,25 @@ import matplotlib.pyplot as plt
 # THRESHOLD = -75
 # MOD_EPISODE = 1
 
+actions_map = ["move south","move north","move east ","move west ","pickup passenger","dropoff passenger"]
 class QLearning(object):
 	"""docstring for QLearning"""
 	def __init__(self, env, episodes=1500, alpha=0.8, gamma=0.95, epsilon=1.0, mod=50, nb_steps=100):
 		self.episodes = episodes
 		self.alpha = alpha
 		self.gamma = gamma
-		self.true_action_prob = 0.7
+		self.true_action_prob = 0.8
 		self.epsilon = epsilon
 		self.env = env
 		self.number_of_actions = self.env.action_space.n
 		self.number_of_states = self.env.observation_space.n
 		self.Q = np.zeros([self.number_of_states, self.number_of_actions])
-		self.eps_min = 0.1
+		self.eps_min = 0.05
 		self.eps_decay = 0.995
 		self.mod = mod
 		self.eps_max = 1.0
 		self.is_test = False
+		self.threshold = 0
 		self.nb_steps = nb_steps
 
 	def get_current_value(self, training=True):
@@ -49,19 +51,16 @@ class QLearning(object):
 		return np.random.choice(6)
 	def train(self, stochastic=False):
 		state = self.env.reset()
-		optimal_reward_episodes = []
+		self.optimal_reward_episodes = []
 		list_of_individual_episode_reward = []
 		avg_reward_all_training = []
 		flag = True
-		threshold_reached = False
 		self.step = 0
 		for episode in range(self.episodes):
-			# print("EPISODE {}".format(episode))
 			reward_episode = 0
 			np.random.seed(0)
 			state = self.env.reset()
 			done = False
-			self.epsilon = 1
 			while not done:
 				action = self.epsilon_greedy(state)
 				if stochastic:
@@ -69,15 +68,14 @@ class QLearning(object):
 						remain_actions = [i for i in range(self.number_of_actions)]
 						remain_actions.remove(action)
 						action = np.random.choice(remain_actions)
+				# print("{}".format(actions_map[action]))
+				# input()
 				new_state, reward, done, info = self.env.step(action)
 				self.Q[state, action] = self.Q[state, action] + self.alpha * (reward + self.gamma * np.max(self.Q[new_state, :]) - self.Q[state, action])
-				self.epsilon = max(self.eps_decay * self.epsilon, self.eps_min)
 				state = new_state
 				reward_episode += reward
-			# if not threshold_reached and reward_episode >= THRESHOLD:
-			# 	threshold_reached = True
-			# if reward_episode >= THRESHOLD:
-			# 	optimal_reward_episodes.append(episode)
+			if reward_episode >= self.threshold:
+				self.optimal_reward_episodes.append(episode)
 			list_of_individual_episode_reward.append(reward_episode)
 			if episode == 0 or (episode + 1) % self.mod == 0:
 				ave_reward = np.mean(list_of_individual_episode_reward)

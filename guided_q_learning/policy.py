@@ -27,6 +27,8 @@ class Policy(object):
         self.env = env
         self.step = 0
         self.causal = causal
+        self.use_model = False
+        self.current_eps = eps_max
 
     def get_current_value(self, training=True):
         if training:
@@ -38,6 +40,7 @@ class Policy(object):
         # self.step = (self.step +  1) % self.nb_steps
         self.step += 1
         # print("eps = {}".format(value))
+        self.current_eps = value
         return value
     def select_action(self, state, Q, training=True):
         raise NotImplementedError
@@ -47,6 +50,7 @@ class EpsilonGreedy(Policy):
         r = np.random.uniform()
         eps = self.get_current_value(training)
         if r > eps:
+            self.use_model = False
             return np.argmax(Q[state])
         r = np.random.uniform()
         if not self.causal:
@@ -54,6 +58,7 @@ class EpsilonGreedy(Policy):
         goal = self.env.get_goal()
         macro_state = self.env.get_state()
         targets = []
+        ##Here we have to add the masterswitch checking function
         for i in range(len(goal)):
             if goal[i] != macro_state[i]:
                 targets.append(i + self.env.num)
@@ -61,7 +66,12 @@ class EpsilonGreedy(Policy):
         for target in targets:
             actions = self.env.causal_structure.get_causes(target)
             if len(actions) > 0:
-                return actions.pop()      
+                if self.env.structure == "masterswitch" and self.env.get_switches_state()[self.env.get_masterswitch()] != 1:
+                    self.use_model = True
+                    return self.env.get_masterswitch()
+                self.use_model = True
+                return actions.pop()  
+        self.use_model = False
         return self.env.sample_action()
 
 class EpsilonGreedyDQN(EpsGreedyQPolicy):

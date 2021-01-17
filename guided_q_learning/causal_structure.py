@@ -14,8 +14,11 @@ class CausalStructure(object):
             self.causes.append(node)
     def get_structure(self):
         pass
-    def draw_graph(self, filename="graph"):
-        pos = nx.bipartite_layout(self.graph, self.causes)
+    def draw_graph(self, filename="graph", is_master=False):
+        if is_master:
+            pos = None
+        else:
+            pos = nx.bipartite_layout(self.graph, self.causes)
         nx.draw(self.graph, pos=pos, with_labels=True)
         plt.savefig("{}.pdf".format(filename))
         # plt.show()

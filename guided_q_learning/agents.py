@@ -60,12 +60,17 @@ class QLearningAgent(object):
     def train(self):
         self.training = True
         self.avg_reward = []
+        self.avg_eps = []
+        self.avg_queries = []
         rewards_per_episode = []
         for episode in range(self.episodes):
+            assisted_times_per_episode = []
+            epsilones = []
             total_episode_reward = 0
             state = self.env.reset()
             done = False
             step = 0
+            assisted_times = 0
             while not done:
                 action = self.select_action(state)
                 new_state, reward, done, info = self.env.step(action)
@@ -75,9 +80,15 @@ class QLearningAgent(object):
                 state = new_state
                 total_episode_reward += reward
                 step += 1
+                if self.policy.causal and self.policy.use_model:
+                    assisted_times += 1
             rewards_per_episode.append(total_episode_reward)
+            epsilones.append(self.policy.current_eps)
+            assisted_times_per_episode.append((assisted_times / step) * 100)
             # self.policy.step = 0
             if episode == 0 or (episode + 1) % self.mod_episode == 0:
+                self.avg_eps.append(np.mean(epsilones))
+                self.avg_queries.append(np.mean(assisted_times_per_episode))
                 rewards_per_episode = self.update_avg_reward(rewards_per_episode)
         return self.avg_reward
     def update_avg_reward(self, rewards_per_episode):

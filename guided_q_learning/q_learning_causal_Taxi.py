@@ -2,6 +2,9 @@
 import random
 import numpy as np
 import time
+
+import gym
+
 from q_learning_Taxi import QLearning
 
 
@@ -16,16 +19,6 @@ def counterfactual(state, action, outcome):
 	destination_locs = [(0,0), (0,4), (4,0), (4,3)]
 	row, col, passenger, destination = state
 	variables = {"goal" : False, "onGoalDestination" : False, "dropoff" : False, "onPassengerDestination" : False, "pickup" : False, "inTheCab" : False,}
-	# variables = {"southA" : False, "northA" : False, "westA" : False, "eastA" : False, "southMove" : False, "northMove" : False, "eastMove" : False, "westMove" : False, "goal" : False, "onGoalDestination" : False, "dropoff" : False, "onPassengerDestination" : False, "pickup" : False, "inTheCab" : False,}
-	# # Movements
-	# if action == 0 and is_a_valid_movement(row, col, action):
-	# 	variables["southMove"] = True
-	# if action == 1 and  is_a_valid_movement(row, col, action):
-	# 	variables["northMove"] = True
-	# if action == 2 and is_a_valid_movement(row, col, action):
-	# 	variables["eastMove"] = True
-	# if action == 3 and is_a_valid_movement(row, col, action):
-	# 	variables["westMove"] = True
 	
 	# Pick and place
 	if action == 4 and passenger < 4:
@@ -48,29 +41,32 @@ class QLearningCausal(QLearning):
 	"""docstring for QLearningCausal"""
 	def epsilon_greedy(self, state):
 		eps = np.random.uniform()
+		# print(state)
 		state_decoded = [i for i in self.env.decode(state)]
-		# if self.is_test: self.epsilon = self.eps_min
+		# print(state_decoded)
+		if eps > self.get_current_value():
+			return np.argmax(self.Q[state, :])
 		if counterfactual(state_decoded, 5, "goal"):
-			# print("*****************")
-			# print("I should dropoff")
-			# print(state_decoded)
-			# self.env.render()
-			# print("*****************")
+			# print("Debo dejarlo")
 			return 5
 		if counterfactual(state_decoded, 4, "inTheCab"):
-			# print("*****************")
-			# print("I should pick up")
-			# print(state_decoded)
-			# self.env.render()
-			# print("*****************")
+			# print("Debo subirlo")
 			return 4
-		if eps > self.get_current_value():
-			return np.argmax(self.Q[state, :4])
 		return np.random.choice(4)
 def main():
-	q = QLearningCausal()
-	avg = q.train("Q-Learning con grafo causal")
-	q.test()
+	# q = QLearningCausal()
+	# avg = q.train("Q-Learning con grafo causal")
+	# q.test()
+	env = gym.make('Taxi-v3')
+	episodes=1
+	mod = 1
+	nb_steps = 200 * episodes
+	q = QLearningCausal(env, episodes=episodes, mod=mod, nb_steps=nb_steps)
+	rewards = q.train()
+	print(rewards)
+	q = QLearning(env, episodes=episodes, mod=mod, nb_steps=nb_steps)
+	rewards = q.train()
+	print(rewards)
 
 if __name__ == '__main__':
 	main()
