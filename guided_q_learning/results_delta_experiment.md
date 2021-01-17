@@ -49,7 +49,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.46</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" title="deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -100,7 +100,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.66</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" title="deterministic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -151,7 +151,7 @@
     <td>$h_0$ rechazada</td>
     <td>3.30</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" title="deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -202,7 +202,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.90</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" title="deterministic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -253,7 +253,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.38</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" title="deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -304,7 +304,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.44</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" title="deterministic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -355,7 +355,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.49</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.png" title="deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -406,7 +406,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.78</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.png" title="deterministic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -457,7 +457,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.77</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.png" title="deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -508,7 +508,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.53</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.png" title="deterministic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -559,7 +559,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.20</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.png" title="deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -610,7 +610,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.04</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.png" title="deterministic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -661,7 +661,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.20</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" title="deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -712,7 +712,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.86</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" title="deterministic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -763,7 +763,7 @@
     <td>$h_0$ rechazada</td>
     <td>3.37</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" title="deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -814,7 +814,7 @@
     <td>$h_0$ rechazada</td>
     <td>2.07</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" title="deterministic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -865,7 +865,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.84</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" title="deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: deterministic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -916,7 +916,7 @@
     <td>$h_0$ rechazada</td>
     <td>nan</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" title="deterministic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -967,7 +967,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.97</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" title="stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1018,7 +1018,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.44</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" title="stochastic_low_025_many_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1069,7 +1069,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.28</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" title="stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1120,7 +1120,7 @@
     <td>$h_0$ aceptada</td>
     <td>0.79</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" title="stochastic_low_025_many_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1171,7 +1171,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.15</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" title="stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: many to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1222,7 +1222,7 @@
     <td>$h_0$ rechazada</td>
     <td>2.46</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" title="stochastic_low_025_many_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1273,7 +1273,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.56</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750.png" title="stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1324,7 +1324,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.31</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250.png" title="stochastic_low_025_one_to_many_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1375,7 +1375,7 @@
     <td>$h_0$ rechazada</td>
     <td>2.35</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250.png" title="stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1426,7 +1426,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.28</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750.png" title="stochastic_low_025_one_to_many_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1477,7 +1477,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.04</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500.png" title="stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to many </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1528,7 +1528,7 @@
     <td>$h_0$ rechazada</td>
     <td>1.57</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500.png" title="stochastic_low_025_one_to_many_N_9_experiments_10_episodes_10000_eps_67500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1579,7 +1579,7 @@
     <td>$h_0$ rechazada</td>
     <td>2.05</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" width="350" title="stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750.png" title="stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_18750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 5 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1630,7 +1630,7 @@
     <td>$h_0$ rechazada</td>
     <td>3.08</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" width="350" title="stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250.png" title="stochastic_low_025_one_to_one_N_5_experiments_10_episodes_5000_eps_6250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1681,7 +1681,7 @@
     <td>$h_0$ rechazada</td>
     <td>3.37</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" width="350" title="stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250.png" title="stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_26250"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 7 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 5000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1732,7 +1732,7 @@
     <td>$h_0$ rechazada</td>
     <td>3.38</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" width="350" title="stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750.png" title="stochastic_low_025_one_to_one_N_7_experiments_10_episodes_5000_eps_8750"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.25 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1783,7 +1783,7 @@
     <td>$h_0$ rechazada</td>
     <td>2.67</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" width="350" title="stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500.png" title="stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_22500"><h3>Ambiente: stochastic</h3><h3>Porcenjate de modificación: low 025</h3><h3>Tipo de estructura: one to one </h3><h3>N: 9 </h3><h3>Simulaciones: 10 </h3><h3>Episodios: 10000 </h3><h3>Delta: 0.75 </h3><table>
   <tr>
     <th>Algoritmo</th>
     <th>M</th>
@@ -1834,4 +1834,4 @@
     <td>$h_0$ aceptada</td>
     <td>0.45</td>
   </tr>
-</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" width="350" title="stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500">
+</table><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500.png" title="stochastic_low_025_one_to_one_N_9_experiments_10_episodes_10000_eps_67500"><h2>Número de episodios en alcanzar racha de recompensas</h2><h3>one_to_one</h3><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/boxplot_one_to_one.png" title="boxplot_one_to_one"><h3>one_to_many</h3><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/boxplot_one_to_many.png" title="boxplot_one_to_many"><h3>many_to_one</h3><img src="results_thesis/light_switches/discrete/experiment_delta/thesis_plots/boxplot_many_to_one.png" title="boxplot_many_to_one">

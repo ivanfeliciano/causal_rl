@@ -3,10 +3,11 @@ from os import listdir
 from os.path import isfile, join
 
 import numpy as np
+import pandas as pd
 from statsmodels.stats.power import TTestIndPower
 
 from utils.performance_utils import *
-from utils.vis_utils import plot_rewards
+from utils.vis_utils import plot_rewards, plot_boxplot
 from utils.performance_utils import cohend, welch_ttest
 
 def avg_rwd_last_t_episodes(rewards, t=100):
@@ -70,16 +71,24 @@ def local_results_to_html(filename, test_table, plot_path):
 def printable_list(row):
 	return [ f"{cell:.2f}"  if type(cell) != str and type(cell) != int else cell for cell in row]
 
+def push_into_storage(storage, num, i, episodes):
+	labels = ["Q-learning", "Q-learning + estructura completa", \
+            "Q-learning + estructura parcial", "Q-learning + estructura incorrecta"]
+	storage["Algoritmo"] = np.concatenate((storage["Algoritmo"], [labels[i]]), axis=None)
+	storage["N"] = np.concatenate((storage["N"], [num]), axis=None)
+	storage["Episodio"] = np.concatenate((storage["Episodio"], np.mean(episodes[:, 0])), axis=None)
+
 def run_tests(results_storage, labels, threshold, rewards, streak_size, num, mod=50):
 	"""
 	docstring
 	"""
 	vanilla_q_streak = max_streaks(rewards[0], threshold, streak_size) * mod
-	results_storage[labels[0]][num] = np.concatenate((results_storage[labels[0]][num], vanilla_q_streak[:, 0]), axis=None)
+	push_into_storage(results_storage, num, 0, vanilla_q_streak)
 	table = []
 	for i in range(len(rewards)):
 		causal_streak = max_streaks(rewards[i], threshold, streak_size) * mod
-		results_storage[labels[i]][num] = np.concatenate((results_storage[labels[i]][num], causal_streak[:, 0]), axis=None)
+		if i > 0:
+			push_into_storage(results_storage, num, i, causal_streak)
 		printable_row = printable_list([labels[i], np.mean(causal_streak[:, 0]), np.std(causal_streak[:, 0])]\
 									+ test(causal_streak[:, 0], vanilla_q_streak[:, 0]))
 		table.append(printable_row)
@@ -88,7 +97,7 @@ def run_tests(results_storage, labels, threshold, rewards, streak_size, num, mod
 def create_storage(labels):
 	results_storage = dict(one_to_one={}, many_to_one={}, one_to_many={})
 	for struct in results_storage:
-		results_storage[struct] = {l : {5 : [], 7 : [], 9 : []} for l in labels}
+		results_storage[struct] = dict(N=[], Algoritmo=[], Episodio=[])
 	return results_storage
 
 def get_struct_and_num(filename):
@@ -110,7 +119,12 @@ def save_str_to_doc(filename, string):
 	with open(filename, "w") as f:
 		f.writelines(string)
 
-def process_dir(input_directory, output_file_name, plot_dir, labels, mod_tests, mod_plot, experiment_name, size=10):
+def call_boxplotting(memory, struct):
+	plot_path = join(base_dir_plots, f"boxplot_{struct}")
+	df = pd.DataFrame.from_dict(memory[struct])
+	plot_boxplot(df, "N", "Episodio", "Algoritmo", plot_path)
+	return plot_path + ".png"
+def process_dir(input_directory, output_file_name, plot_dir, labels, mod_tests, mod_plot, experiment_name, size=10, t=50):
 	"""
 	docstring
 	"""
@@ -121,13 +135,16 @@ def process_dir(input_directory, output_file_name, plot_dir, labels, mod_tests, 
 	for filepath in files_list:
 		name = filepath[:-4].replace(".", "")
 		rewards = preprocess_np_arrays(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=mod_tests))
-		solving_threshold = avg_rwd_last_t_episodes(rewards[0], t=50)
+		solving_threshold = avg_rwd_last_t_episodes(rewards[0], t)
 		struct, num = get_struct_and_num(filepath)
 		table = run_tests(memory[struct], labels, solving_threshold, rewards, size, num, mod_tests)
 		plot_path = plot_mat(transform_to_modulated_matrix(read_mat_from_file(join(input_directory, filepath)), mod=mod_plot), plot_dir, name, mod=mod_plot)
 		html_str += local_results_to_html(filepath, table, plot_path)
+	html_str += "<h2>Número de episodios en alcanzar racha de recompensas</h2>"
+	for struct in ["one_to_one", "one_to_many", "many_to_one"]:
+		html_str += f"<h3>{struct}</h3>"
+		html_str += f'<img src="{call_boxplotting(memory, struct)}" title="boxplot_{struct}">'
 	save_str_to_doc(output_file_name, html_str)
-	return memory
 
 if __name__ == "__main__":
 	input_directory = sys.argv[1]
@@ -137,5 +154,6 @@ if __name__ == "__main__":
 	mod_plots = int(sys.argv[5])
 	mod_tests = int(sys.argv[6])
 	streak_size = int(sys.argv[7])
+	t = int(sys.argv[8])
 	labels = ["$Q_1$", "$Q_2$", "$Q_3$", "$Q_4$"]
-	memory = process_dir(input_directory, output_file_name, base_dir_plots, labels, mod_tests, mod_plots, experiment_name, size=streak_size)
+	process_dir(input_directory, output_file_name, base_dir_plots, labels, mod_tests, mod_plots, experiment_name, streak_size, t)
