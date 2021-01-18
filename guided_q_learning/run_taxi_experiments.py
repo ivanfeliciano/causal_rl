@@ -17,10 +17,8 @@ from utils.performance_utils import cohend, welch_ttest
 
 
 def test(x, y):
-	# stat, p = stats.mannwhitneyu(x, y)
 	stat, p = stats.ttest_ind(x, y, equal_var=False)
 	print('Statistics=%.3f, p=%.3f' % (stat, p))
-	# interpret
 	alpha = 0.05
 	if p > alpha:
 		print('Same distribution (fail to reject H0)')
@@ -38,6 +36,10 @@ def test(x, y):
 	print(f"degrees of freedom: {dof:.2f}")
 
 def longest_streak(list_episodes):
+	"""
+	Returns the length of the longest streak of "optimal"
+	rewards.
+	"""
 	streak_start = 0
 	length = 0
 	max_length = 0
@@ -60,8 +62,24 @@ def longest_streak(list_episodes):
 
 
 def main():
+	"""
+	Function to run experiments.
+	
+	Example of terminal input to run this script.
+	
+	# Executes the experiment for a deterministic environment 50 simulations, reaching the minimum exploration rate before 
+	# the first quarter of the training and plotting the results.
+
+	python run_taxi_experiments.py --plot --partition 20 --experiments 50
+	
+	# Executes the experiment for a stochastic environment 50 simulations, reaching the minimum exploration rate before 
+	# the first quarter of the training and plotting the results. Also, the defined as "optimal" reward is -30.
+
+	python run_taxi_experiments.py --plot --partition 20 --experiments 50 --stochastic --threshold  -30
+	"""
+
 	parser = argparse.ArgumentParser(description='Run Q-learning and Q-learning CM to solve the classic Taxi RL problem.')
-	parser.add_argument("--stochastic", help="change to simple stochastic enviroments (0.7 prob of do the choosen action)",\
+	parser.add_argument("--stochastic", help="change to simple stochastic enviroments (0.8 prob of do the choosen action)",\
 						action="store_true")
 	parser.add_argument("--episodes", type=int, default=1000, help="# of episodes per experiment")
 	parser.add_argument("--partition", type=int, default=100, help="eps factor")
@@ -114,12 +132,6 @@ def main():
 	for i in range(2):
 		mean_vectors[i] = np.mean(total_rewards[i], axis=0)
 		std_dev_vectors[i] = np.std(total_rewards[i], axis=0)
-	# std_dev_vectors[2] = np.zeros(len(mean_vectors[0]))
-	# mean_vectors[2] = np.ones(len(mean_vectors[0]))
-	# if stochastic:
-	# 	mean_vectors[2] = mean_vectors[2] * 0
-	# else:
-	# 	mean_vectors[2] = mean_vectors[2] * 9.7
 	print("Mean causal initial episode {}".format(np.mean(optimal_reward_streak_causal_init)))
 	print("Std causal initial episode {}".format(np.std(optimal_reward_streak_causal_init)))
 	print("Mean vanilla initial episode {}".format(np.mean(optimal_reward_streak_vanilla_init)))
@@ -129,13 +141,6 @@ def main():
 	print(optimal_reward_streak_vanilla_init)
 	print(optimal_reward_streak_vanilla_size)
 	test(optimal_reward_streak_vanilla_init, optimal_reward_streak_causal_init)
-	
-
-	# print("Mean causal streak size {}".format(np.mean(optimal_reward_streak_causal_size)))
-	# print("std causal streak size {}".format(np.std(optimal_reward_streak_causal_size)))
-	# print("Mean vanilla streak size {}".format(np.mean(optimal_reward_streak_vanilla_size)))
-	# print("std vanilla streak size {}".format(np.std(optimal_reward_streak_vanilla_size)))
-	# test(optimal_reward_streak_vanilla_size, optimal_reward_streak_causal_size)
 	x_axis = mod * (np.arange(len(mean_vectors[1])))
 	plot_dir_name = "plots/taxi/"
 	plot_name = "taxi_env_comparison_{}_{}_{}_eps_{}".format("sto" if stochastic else "det", episodes, number_of_experiments, nb_steps)
