@@ -1,4 +1,4 @@
-import mujoco_py
+# import mujoco_py
 import os
 import numpy as np
 import gym
@@ -28,8 +28,8 @@ class LightEnv(gym.GoalEnv):
         fullpath = os.path.join(os.path.dirname(__file__), 'assets', "arena_v2_"+str(num)+".xml")
         if not os.path.exists(fullpath):
             raise IOError('File {} does not exist'.format(fullpath))
-        model = mujoco_py.load_model_from_path(fullpath)
-        self.sim = mujoco_py.MjSim(model)
+        # model = mujoco_py.load_model_from_path(fullpath)
+        # self.sim = mujoco_py.MjSim(model)
         self.index = 0
         self.filename = filename
         self.horizon = horizon
@@ -222,9 +222,10 @@ class LightEnv(gym.GoalEnv):
         
         im = []
         if images:
-            self.sim.model.light_active[:] = light
-            im = self.sim.render(width=84,height=84,camera_name="birdview")
-            im = im.astype(np.uint8)
+            pass
+            # self.sim.model.light_active[:] = light
+            # im = self.sim.render(width=84,height=84,camera_name="birdview")
+            # im = im.astype(np.uint8)
             # return im
 
         ## Concatenate goal
@@ -252,8 +253,8 @@ class LightEnv(gym.GoalEnv):
         state = np.random.randint(0, 2, size=(self.num))
         light = np.dot(state.T, self.aj)
         light = light % 2
-        self.sim.model.light_active[:] = light
-        self.goalim = self.sim.render(mode='offscreen', width=84,height=84,camera_name="birdview") / 255.0 
+        # self.sim.model.light_active[:] = light
+        # self.goalim = self.sim.render(mode='offscreen', width=84,height=84,camera_name="birdview") / 255.0 
         return light
     
     def generate_cs_set1(self, sz, cut=False):

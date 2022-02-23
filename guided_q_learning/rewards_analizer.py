@@ -5,6 +5,8 @@ from os.path import isfile, join
 import numpy as np
 import pandas as pd
 from statsmodels.stats.power import TTestIndPower
+from scipy import stats
+
 
 from utils.performance_utils import *
 from utils.vis_utils import plot_rewards, plot_boxplot
@@ -62,7 +64,7 @@ def local_results_to_html(filename, test_table, plot_path):
 	text += f"<h3>Simulaciones: {splited_name[9]} </h3>"
 	text += f"<h3>Episodios: {splited_name[11]} </h3>"
 	text += f"<h3>Delta: {delta} </h3>"
-	header = ["Algoritmo", "M", "SD", "t", "df", "p", "H0", "d de Cohen"]
+	header = ["Algorithm", "M", "SD", "t", "df", "p", "H0", "d de Cohen"]
 	text += array_to_html_table(header, test_table)
 	# text += f"\n\n![plot]({plot_path})"
 	text += f'<img src="{plot_path}" title="{name}">'
@@ -72,12 +74,12 @@ def printable_list(row):
 	return [ f"{cell:.2f}"  if type(cell) != str and type(cell) != int else cell for cell in row]
 
 def push_into_storage(storage, num, i, episodes):
-	labels = ["Q-learning", "Q-learning + estructura completa", \
-            "Q-learning + estructura parcial", "Q-learning + estructura incorrecta"]
+	labels = ["Q-learning", "Q-learning + full structure", \
+            "Q-learning + partial structure", "Q-learning + wrong structure"]
 	s = len(episodes[:, 0])
-	storage["Algoritmo"] = np.concatenate((storage["Algoritmo"], [labels[i]]), axis=None)
+	storage["Algorithm"] = np.concatenate((storage["Algorithm"], [labels[i]]), axis=None)
 	storage["N"] = np.concatenate((storage["N"], [num]), axis=None)
-	storage["Episodio"] = np.concatenate((storage["Episodio"], np.mean(episodes[:, 0])), axis=None)
+	storage["Episodes"] = np.concatenate((storage["Episodes"], np.mean(episodes[:, 0])), axis=None)
 
 def push_into_global_table(args, row, general_table):
 	"""
@@ -90,7 +92,7 @@ def push_into_global_table(args, row, general_table):
 	general_table["Ambiente"].append(args[0])
 	general_table["Parametro"].append(args[1] if args[4] == "pmod" else args[2])
 	general_table["N"].append(args[3])
-	general_table["Algoritmo"].append(row[0])
+	general_table["Algorithm"].append(row[0])
 	general_table["M"].append(row[1])
 	general_table["STD"].append(row[2])
 	general_table["t"].append(row[3])
@@ -127,7 +129,7 @@ def create_storage():
 	results_storage["stochastic"] = dict(one_to_one={}, many_to_one={}, one_to_many={})
 	for env in results_storage:
 		for struct in results_storage[env]:
-			results_storage[env][struct] = dict(N=[], Algoritmo=[], Episodio=[])
+			results_storage[env][struct] = dict(N=[], Algorithm=[], Episodes=[])
 	return results_storage
 
 def get_args(filename):
@@ -140,8 +142,8 @@ def get_args(filename):
 	return struct, int(num), env, pmod, delta
 
 def plot_mat(mat, base_dir_plots, name, mod):
-	labels = ["Q-learning", "Q-learning + estructura completa", \
-            "Q-learning + estructura parcial", "Q-learning + estructura incorrecta"]
+	labels = ["Q-learning", "Q-learning + full structure", \
+            "Q-learning + partial structure", "Q-learning + wrong structure"]
 	mean_vectors, std_dev_vectors = compute_mean_and_std_dev(mat)
 	x_axis = mod * (np.arange(len(mean_vectors[0])))
 	plot_path = join(base_dir_plots, name)
@@ -155,7 +157,7 @@ def save_str_to_doc(filename, string):
 def call_boxplotting(memory, struct, env):
 	plot_path = join(base_dir_plots, f"boxplot_{env}_{struct}")
 	df = pd.DataFrame.from_dict(memory[env][struct])
-	plot_boxplot(df, "N", "Episodio", "Algoritmo", plot_path)
+	plot_boxplot(df, "N", "Episode", "Algorithm", plot_path)
 	return plot_path + ".png"
 
 def create_html_tables(global_table):
@@ -163,7 +165,7 @@ def create_html_tables(global_table):
 	for struct in global_table:
 		html_str += f"<h3>{struct}</h3>"
 		df = pd.DataFrame.from_dict(global_table[struct])
-		df = df.sort_values(by=["Ambiente", "N", "Parametro", "Algoritmo"]).reset_index(drop=True)
+		df = df.sort_values(by=["Ambiente", "N", "Parametro", "Algorithm"]).reset_index(drop=True)
 		html_str += df.to_html()
 	return html_str
 
@@ -175,7 +177,7 @@ def create_general_table():
 	table = dict(one_to_one={}, many_to_one={}, one_to_many={})
 	for struct in table:
 		table[struct] = dict(Ambiente=[], N=[], Parametro=[],\
-												Algoritmo=[], M=[], STD=[],\
+												Algorithm=[], M=[], STD=[],\
 												t=[], df=[], p=[], H0=[], Cohend=[])
 	return table
 
