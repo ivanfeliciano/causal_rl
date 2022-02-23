@@ -35,7 +35,7 @@ class LightAndSwitchEnv(Environment):
         all_states = powerset(self.num)
         self.number_of_states = len(all_states)
         return {
-            state :  np.zeros(self.n_actions) for state in all_states
+            state :  np.ones(self.n_actions) * -100 for state in all_states
         }
     def map_obs(self, state):
         return tuple(state[:self.num].astype(int))

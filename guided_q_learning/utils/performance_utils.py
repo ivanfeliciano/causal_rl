@@ -38,6 +38,17 @@ def compute_stat_test(mean_vectors, number_of_evaluation_episodes=100, alpha=0.0
         p_values_welch.append(p)
     return mean_rewar_eval, p_values_welch
 
+def cohend(d1, d2):
+    n1, n2 = len(d1), len(d2)
+    s1, s2 = np.var(d1, ddof=1), np.var(d2, ddof=1)
+    s = np.sqrt(((n1 - 1) * s1 + (n2 - 1) * s2) / (n1 + n2 - 2))
+    u1, u2 = np.mean(d1), np.mean(d2)
+    return (u1 - u2) / s
+
+def welch_ttest(x, y): 
+    return (x.var() / x.size + y.var() / y.size)**2\
+            / ((x.var() / x.size)**2 / (x.size - 1) + (y.var() / y.size)**2 / (y.size - 1))
+
 def array_to_html_table(header, array):
     table = "<table>\n"
     table += "  <tr>\n"

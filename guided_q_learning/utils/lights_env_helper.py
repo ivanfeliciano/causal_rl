@@ -7,11 +7,14 @@ def powerset(n):
         powerset.append(tuple([int(_) for _ in np.binary_repr(i, width=n)]))
     return powerset
 
-def aj_to_adj_list(adj_mat):
+def aj_to_adj_list(env, masterswitch=False):
+    adj_mat = env.aj
     n_causes = len(adj_mat)
     adj_list = dict()
     for (node, succesors) in enumerate(adj_mat):
         adj_list[node] = [(i + n_causes, succesors[i]) for i in range(n_causes) if succesors[i] > 0]
+        if masterswitch and node == env.ms:
+            adj_list[node] += [(i, 1.0) for i in range(n_causes)]
     return adj_list
 
 def remove_edges(adj_list, prob=0.85):

@@ -128,7 +128,7 @@ def main():
 	len_vectors = 2
 	mean_vectors = [_ for _ in range(len_vectors)]
 	std_dev_vectors = [_ for _ in range(len_vectors)]
-	labels = ["Q-learning", "Q-learning con estructura causal"]#, "Recompensa óptima"]
+	labels = ["Q-learning", "Q-learning with causal structure"]#, "Recompensa óptima"]
 	for i in range(2):
 		mean_vectors[i] = np.mean(total_rewards[i], axis=0)
 		std_dev_vectors[i] = np.std(total_rewards[i], axis=0)
